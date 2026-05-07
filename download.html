@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KUSSA SOFTWARE</title>
+  <!-- Website Icon -->
+  <link rel="icon" type="image/png" href="images/app_icon.ico">
+
+  <!-- Font Awesome for WhatsApp icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 1900px;
+      padding: 20px;
+    }
+    .logo {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .logo-img {
+        width: 180px;      /* adjust size */
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: 200;
+      margin-bottom: 30px;
+      line-height: 1.4;
+      color: #000;
+    }
+
+    .desc {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .whatsapp-btn {
+      width: 100%;
+      padding: 18px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-btn i {
+      color: #25D366;
+      font-size: 34px;
+    }
+
+    /* FOOTER CSS */
+
+.footer__container {
+    background-color: var(--bg-main);
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   #footer__logo{
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+   }
+   
+   /* Social Icons */
+
+   .social__icon--links {
+    color: var(--text-muted);         
+    font-size: 24px;     
+    margin: 0 10px;
+    text-decoration: none;
+    }
+  
+
+   .social__media{
+    max-width: 1000px;
+    width: 100%;
+   }
+
+   .social__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+   }
+
+   .social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+   }
+
+   .social__logo {
+    Color: var(--text-main);
+    justify-self: self-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+   }
+
+   .website__rights{
+    color: var(--text-main);
+   }
+
+   @media screen and (max-width: 820px){
+
+
+    #footer__logo{
+        margin-bottom: 2rem;
+    }
+
+    .website__rights{
+        margin-bottom: 2rem;
+    }
+
+    .social__media--wrap{
+        flex-direction: column;
+    }
+   }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <!--<span>K</span>ussa-->
+      <img src="images/logo_tall.png" alt="NEXT Logo" class="logo-img">
+    </div>
+
+    <div class="title">
+      Our website is undergoing maintenance for the implementation of its new version.
+    </div>
+
+    <div class="desc">
+      Send us a message on WhatsApp and we will send you Kussa APK.
+    </div>
+
+    <button class="whatsapp-btn" onclick="openWhatsApp()">
+      <i class="fa-brands fa-whatsapp"></i>
+      SEND MESSAGE
+    </button>
+
+    <div class="footer__container">
+
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="/" id="navbar__logo">
+                        <img src="images/logo_tall.png" alt="NEXT Logo" class="logo-img">
+                    </a>
+                </div>
+                <br>
+                <p class="website__rights">KUSSA 2026. All rights reserved</p>
+                <div class="social__icons">
+                    
+                    <a href="/" class="social__icon--links" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+    
+                    <a href="/" class="social__icon--links" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+    
+                    <a href="/" class="social__icon--links" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+    
+                    <a href="/" class="social__icon--links" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+     </div>
+  </div>
+
+  
+
+  <script>
+    function openWhatsApp() {
+      // Replace with your WhatsApp number
+      const phone = "212605340735";
+
+      // Optional pre-filled message
+      const message = encodeURIComponent(
+        "Hello, please send me the Kussa APK."
+      );
+
+      // Open WhatsApp
+      window.open(
+        `https://wa.me/${phone}?text=${message}`,
+        "_blank"
+      );
+    }
+  </script>
+
+</body>
+</html>
