@@ -1,0 +1,40 @@
+[
+    {
+      "version": "0.0.3",
+      "changes": [
+        "Change number 1",
+        "Change number 2",
+        "Change number 3"
+      ],
+      "downloads": {
+        "android": "downloads/app_v0.0.3.apk",
+        "windows": "downloads/app_v0.0.3.exe",
+        "ios": "#"
+      }
+    },
+    {
+      "version": "0.0.2",
+      "changes": [
+        "Change number 1",
+        "Change number 2"
+      ],
+      "downloads": {
+        "android": "downloads/app_v0.0.2.apk",
+        "windows": "downloads/app_v0.0.2.exe",
+        "ios": "#"
+      }
+    },
+    {
+      "version": "0.0.1",
+      "changes": [
+        "Change number 1",
+        "Change number 2",
+        "Change number 3"
+      ],
+      "downloads": {
+        "android": "downloads/app_v0.0.1.apk",
+        "windows": "downloads/app_v0.0.1.exe",
+        "ios": "#"
+      }
+    }
+  ]

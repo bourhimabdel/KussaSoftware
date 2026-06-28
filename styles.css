@@ -603,3 +603,23 @@ body > * {
   }
 
   
+
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.price-container img.price-icon {
+    width: 24px;
+    height: 24px;
+    display: block;   /* 🔥 important fix */
+    object-fit: contain;
+}
+
+.price-container h2 {
+    margin: 0;
+    line-height: 1;
+}
