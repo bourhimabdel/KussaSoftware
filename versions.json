@@ -1,39 +1,22 @@
 [
     {
-      "version": "0.0.3",
+      "version": "0.0.9",
       "changes": [
-        "Change number 1",
-        "Change number 2",
-        "Change number 3"
+        "Barcode scanner integration (USB and Zebra devices)",
+        "Offline mode with automatic cloud sync",
+        "Arabic/French/English interface",
+        "Real-time inventory updates",
+        "Role-based permissions",
+        "Multi-store support",
+        "Responsive design for desktop, tablet, and mobile",
+        "Comprehensive dashboard with sales and profit analytics",
+        "Receipt customization and thermal printer support",
+        "Automatic backup and restore",
+        "Inventory alerts and purchase management"
       ],
       "downloads": {
-        "android": "downloads/app_v0.0.3.apk",
-        "windows": "downloads/app_v0.0.3.exe",
-        "ios": "#"
-      }
-    },
-    {
-      "version": "0.0.2",
-      "changes": [
-        "Change number 1",
-        "Change number 2"
-      ],
-      "downloads": {
-        "android": "downloads/app_v0.0.2.apk",
-        "windows": "downloads/app_v0.0.2.exe",
-        "ios": "#"
-      }
-    },
-    {
-      "version": "0.0.1",
-      "changes": [
-        "Change number 1",
-        "Change number 2",
-        "Change number 3"
-      ],
-      "downloads": {
-        "android": "downloads/app_v0.0.1.apk",
-        "windows": "downloads/app_v0.0.1.exe",
+        "android": "downloads/kusox_0.0.9.apk",
+        "windows": "downloads/kusox_0.0.9.exe",
         "ios": "#"
       }
     }
