@@ -15,8 +15,8 @@
         "Inventory alerts and purchase management"
       ],
       "downloads": {
-        "android": "downloads/Kusox Android V0.1.0.rar",
-        "windows": "downloads/Kusox Windows V0.1.0.rar",
+        "android": "downloads/Kusox Android V0.1.0.apk",
+        "windows": "downloads/Kusox Windows V0.1.0.exe",
         "ios": "#"
       }
     }
