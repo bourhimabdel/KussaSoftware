@@ -1,6 +1,6 @@
 [
     {
-      "version": "0.0.9",
+      "version": "0.1.0",
       "changes": [
         "Barcode scanner integration (USB and Zebra devices)",
         "Offline mode with automatic cloud sync",
@@ -15,8 +15,8 @@
         "Inventory alerts and purchase management"
       ],
       "downloads": {
-        "android": "downloads/kusox_0.0.9.apk",
-        "windows": "downloads/kusox_0.0.9.exe",
+        "android": "downloads/Kusox Android V0.1.0.rar",
+        "windows": "downloads/Kusox Windows V0.1.0.rar",
         "ios": "#"
       }
     }
