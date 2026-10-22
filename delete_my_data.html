@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request Data Deletion | KUSOX SOFTWARE</title>
+
+    <meta name="description"
+          content="Request deletion of your KUSOX account, projects, and associated data by contacting our support team.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#141414">
+
+    <link rel="icon" href="images/app_icon.ico">
+
+    <style>
+        :root {
+            --bg-main: #141414;
+            --bg-card: #1e1e1e;
+            --accent: #f77062;
+            --text-main: #ffffff;
+            --text-muted: #b7b7b7;
+            --border: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* Header */
+
+        header {
+            width: 100%;
+            padding: 20px 6%;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: block;
+            width: 180px;
+            max-width: 65%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .home-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .home-link:hover {
+            color: var(--accent);
+        }
+
+        /* Main section */
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .deletion-card {
+            width: 100%;
+            max-width: 720px;
+            padding: 45px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-container {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            background: rgba(247, 112, 98, 0.12);
+            color: var(--accent);
+            font-size: 32px;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: clamp(26px, 4vw, 36px);
+            line-height: 1.3;
+        }
+
+        .intro {
+            margin-bottom: 25px;
+            color: var(--text-muted);
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .section-title {
+            margin: 25px 0 10px;
+            font-size: 17px;
+            color: var(--text-main);
+        }
+
+        .data-list {
+            list-style: none;
+            margin: 12px 0 25px;
+        }
+
+        .data-list li {
+            position: relative;
+            padding: 8px 0 8px 30px;
+            color: var(--text-muted);
+        }
+
+        .data-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .email-box {
+            margin-top: 25px;
+            padding: 20px;
+            background: #171717;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .email-label {
+            margin-bottom: 5px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .email-address {
+            color: var(--accent);
+            font-size: 19px;
+            font-weight: bold;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .email-address:hover {
+            text-decoration: underline;
+        }
+
+        .subject {
+            margin-top: 12px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .subject strong {
+            color: var(--text-main);
+        }
+
+        /* Button */
+
+        .button-container {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .email-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            min-height: 54px;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            background: var(--accent);
+            color: #141414;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .email-button:hover {
+            background: #ff8a7e;
+            transform: translateY(-2px);
+        }
+
+        .email-button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid white;
+            outline-offset: 4px;
+        }
+
+        .verification-note {
+            margin-top: 22px;
+            padding: 14px 16px;
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            background: rgba(247, 112, 98, 0.06);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .verification-note strong {
+            color: var(--text-main);
+        }
+
+        .security-note {
+            margin-top: 15px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 22px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            header {
+                padding: 16px 20px;
+            }
+
+            .logo {
+                width: 145px;
+            }
+
+            .home-link {
+                font-size: 12px;
+            }
+
+            main {
+                padding: 30px 15px;
+            }
+
+            .deletion-card {
+                padding: 28px 22px;
+                border-radius: 14px;
+            }
+
+            .intro {
+                font-size: 14px;
+            }
+
+            .email-address {
+                font-size: 17px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+
+            <a href="/" aria-label="KUSOX home">
+                <img
+                    src="images/logo_tall.png"
+                    alt="KUSOX SOFTWARE"
+                    class="logo"
+                >
+            </a>
+
+            <a href="/" class="home-link">
+                Back to Home
+            </a>
+
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="deletion-card"
+                 aria-labelledby="page-title">
+
+            <div class="icon-container" aria-hidden="true">
+                &#128465;
+            </div>
+
+            <h1 id="page-title">
+                Request Data Deletion
+            </h1>
+
+            <p class="intro">
+                Want to delete your KUSOX data?
+                We're here to help. Send our support team an email
+                explaining which data you want us to delete.
+            </p>
+
+            <h2 class="section-title">
+                What would you like to delete?
+            </h2>
+
+            <p>
+                Please specify exactly what you want removed from
+                your KUSOX account. For example:
+            </p>
+
+            <ul class="data-list">
+                <li>
+                    <strong>A project:</strong>
+                    a specific project and its associated data.
+                </li>
+
+                <li>
+                    <strong>Project data:</strong>
+                    products, sales, tickets, or other information
+                    associated with a project.
+                </li>
+
+                <li>
+                    <strong>Your account:</strong>
+                    your KUSOX account and associated data.
+                </li>
+            </ul>
+
+            <p>
+                If your request concerns a specific project,
+                please include its name or ID so we can identify it.
+            </p>
+
+            <!-- Email details -->
+            <div class="email-box">
+
+                <p class="email-label">
+                    Send your deletion request to
+                </p>
+
+                <a
+                    class="email-address"
+                    href="mailto:support@kusox.com"
+                >
+                    support@kusox.com
+                </a>
+
+                <p class="subject">
+                    Required email subject:<br>
+                    <strong>KUSOX Data Deletion Request</strong>
+                </p>
+
+            </div>
+
+            <!-- Email action -->
+            <div class="button-container">
+                <a
+                    class="email-button"
+                    id="send-email"
+                    href="mailto:support@kusox.com?subject=KUSOX%20Data%20Deletion%20Request"
+                >
+                    <span aria-hidden="true">&#9993;</span>
+                    Send Deletion Request
+                </a>
+            </div>
+
+            <div class="verification-note">
+                <strong>Important:</strong>
+                Send your request from the same email address
+                you use to sign in to the KUSOX application.
+                This helps us verify ownership of your account.
+            </div>
+
+            <p class="security-note">
+                Never include your password in your email.
+                Your request will be reviewed by our support team.
+                Sending an email does not automatically delete your data.
+            </p>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; <span id="year"></span> KUSOX SOFTWARE.
+            All rights reserved.
+        </p>
+
+        <p>
+            <a href="/">Visit kusox.com</a>
+            &nbsp; | &nbsp;
+            <a href="mailto:support@kusox.com">
+                Contact Support
+            </a>
+        </p>
+    </footer>
+
+    <script>
+        // Automatically update the copyright year.
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Prepare the deletion request email.
+        const emailButton = document.getElementById("send-email");
+
+        const subject = "KUSOX Data Deletion Request";
+
+        const body = [
+            "Hello KUSOX Support,",
+            "",
+            "I would like to request the deletion of data associated with my KUSOX account.",
+            "",
+            "Account email:",
+            "Project name or ID (if applicable):",
+            "Data I want to delete:",
+            "Additional details (optional):",
+            "",
+            "Please review my request and confirm when it has been processed.",
+            "",
+            "Thank you."
+        ].join("\n");
+
+        emailButton.href =
+            "mailto:support@kusox.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+    </script>
+
+</body>
+</html>
