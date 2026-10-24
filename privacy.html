@@ -1,51 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRC76MS0VD"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-     
-       gtag('config', 'G-GRC76MS0VD');
-     </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KUSOX PRIVACY POLICY</title>
-<meta property="og:description" content="Be careful to read kusox privacy policy">
-
-    <!-- Website Icon -->
-    <link rel="icon" type="image/png" href="images/app_icon.ico">
-<style>
-body { font-family: Arial, sans-serif; background: #f9f9f9; color: #222;
-padding: 40px; }
-.container { max-width: 900px; margin: auto; background: #fff; padding:
-30px; border-radius: 8px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | KUSOX SOFTWARE</title>
+  <meta name="description" content="Read the KUSOX SOFTWARE Privacy Policy to learn what information we collect, how we use and protect it, and how to contact us about your data.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#141414">
+  <link rel="icon" href="images/app_icon.ico">
+  <style>
+    :root {
+          --bg-main: #f5f6fa;
+          --bg-card: #ffffff;
+          --bg-soft: #f8f9fc;
+          --accent: #f77062;
+          --text-main: #222831;
+          --text-muted: #626b78;
+          --border: #e1e5eb;
+        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      min-height: 100vh; display: flex; flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif; background: var(--bg-main);
+      color: var(--text-main); line-height: 1.75;
+    }
+    a { color: var(--accent); }
+    a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    header { width: 100%; padding: 20px 6%; border-bottom: 1px solid var(--border); }
+    .header-content {
+      max-width: 1200px; margin: 0 auto; display: flex;
+      align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .logo { display: block; width: 180px; max-width: 65%; height: auto; object-fit: contain; }
+    .home-link { color: var(--text-muted); text-decoration: none; font-size: 14px; }
+    .home-link:hover, footer a:hover { color: var(--accent); }
+    main { width: 100%; flex: 1; padding: 54px 20px 64px; }
+    .policy-card {
+      width: 100%; max-width: 900px; margin: 0 auto; padding: 46px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 18px; box-shadow: 0 15px 45px rgba(0,0,0,.2);
+    }
+    .eyebrow {
+      display: inline-block; margin-bottom: 12px; padding: 5px 11px;
+      border: 1px solid rgba(247,112,98,.35); border-radius: 999px;
+      background: rgba(247,112,98,.08); color: var(--accent);
+      font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    }
+    h1 { margin-bottom: 8px; font-size: clamp(29px, 4vw, 40px); line-height: 1.25; }
+    .updated { margin-bottom: 22px; color: var(--text-muted); font-size: 13px; }
+    .intro { margin-bottom: 25px; color: var(--text-muted); font-size: 16px; }
+    .contents {
+      margin: 24px 0 30px; padding: 20px 22px; border: 1px solid var(--border);
+      border-radius: 12px; background: var(--bg-soft);
+    }
+    .contents h2 { margin: 0 0 10px; font-size: 16px; }
+    .contents ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 22px; padding-left: 19px; }
+    .contents li { color: var(--text-muted); padding-left: 2px; }
+    .contents a { color: var(--text-muted); text-decoration: none; }
+    .contents a:hover { color: var(--accent); }
+    .policy-section { padding-top: 22px; margin-top: 22px; border-top: 1px solid var(--border); }
+    h2.section-title { margin-bottom: 10px; font-size: 20px; line-height: 1.4; }
+    p { margin: 0 0 12px; }
+    .policy-section p, .policy-section li { color: var(--text-muted); }
+    .policy-section ul { padding-left: 23px; margin: 10px 0 14px; }
+    .policy-section li { margin: 7px 0; padding-left: 3px; }
+    strong { color: var(--text-main); }
+    .notice {
+      margin-top: 18px; padding: 16px 18px; border-left: 3px solid var(--accent);
+      border-radius: 5px; background: rgba(247,112,98,.06); color: var(--text-muted); font-size: 14px;
+    }
+    .contact-box {
+      margin-top: 16px; padding: 20px; background: var(--bg-soft);
+      border: 1px solid var(--border); border-radius: 12px;
+    }
+    .contact-box p { color: var(--text-muted); }
+    .contact-email { font-size: 18px; font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+    footer { padding: 22px 20px; border-top: 1px solid var(--border); color: var(--text-muted); text-align: center; font-size: 13px; }
+    footer p { margin: 4px 0; }
+    footer a { color: var(--text-main); text-decoration: none; }
+    @media (max-width: 650px) {
+      header { padding: 16px 20px; }
+      .logo { width: 145px; }
+      .home-link { font-size: 12px; }
+      main { padding: 28px 14px 38px; }
+      .policy-card { padding: 28px 21px; border-radius: 14px; }
+      .intro { font-size: 14px; }
+      .contents ul { grid-template-columns: 1fr; }
+      h2.section-title { font-size: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Privacy Policy</h1>
-<p><strong>Last updated:</strong>04-03-2026</p>
-<h2>Information We Collect</h2>
-<ul>
-<li>Account information (name, email)</li>
-<li>Business data (sales, products, customers)</li>
-<li>Usage and device information</li>
-</ul>
-<h2>How We Use Data</h2>
-<p>To provide services, process payments, improve features, and support
-users.</p>
-<h2>Third-Party Services</h2>
-<p>We use Firebase for data storage and Paddle for payment processing.</p>
-<h2>Data Security</h2>
-<p>We apply reasonable security measures but cannot guarantee absolute
-security.</p>
-<h2>Your Rights</h2>
-<p>You may request access, correction, or deletion of your data.</p>
-<h2>Contact</h2>
-<p>Email: contact@kusox.com </p>
-</div>
+  <header>
+    <div class="header-content">
+      <a href="/" aria-label="KUSOX home">
+        <img src="images/logo_tall.png" alt="KUSOX SOFTWARE" class="logo">
+      </a>
+      <a href="/" class="home-link">Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="policy-card" aria-labelledby="page-title">
+      <span class="eyebrow">Privacy &amp; data</span>
+      <h1 id="page-title">Privacy Policy</h1>
+      <p class="updated">Last updated: October 24, 2026</p>
+      <p class="intro">
+        This Privacy Policy explains how KUSOX SOFTWARE collects, uses, stores, and protects
+        information when you use KUSOX applications and related services. Please read it carefully
+        to understand your choices and how to contact us about your data.
+      </p>
+
+      <nav class="contents" aria-label="Privacy policy contents">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#information">Information we collect</a></li>
+          <li><a href="#use">How we use information</a></li>
+          <li><a href="#storage">Storage and third parties</a></li>
+          <li><a href="#sharing">How information is shared</a></li>
+          <li><a href="#security">Data security</a></li>
+          <li><a href="#retention">Data retention and deletion</a></li>
+          <li><a href="#rights">Your choices and rights</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#changes">Policy updates</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <section class="policy-section" id="information">
+        <h2 class="section-title">1. Information We Collect</h2>
+        <p>Depending on the features you use, KUSOX may collect or process the following categories of information:</p>
+        <ul>
+          <li><strong>Account information:</strong> information such as your name and email address that you provide when creating or managing an account.</li>
+          <li><strong>Business and project data:</strong> information you enter into the application, which may include products, prices, stock, sales, tickets, customer details, cashier details, and project settings.</li>
+          <li><strong>Usage and device information:</strong> technical information related to application use and the device or environment used to access the service. The specific information available may depend on the features and services enabled.</li>
+          <li><strong>Payment-related information:</strong> subscription or transaction information needed to manage purchases, billing status, and support requests. Payment processing may be handled by our payment provider.</li>
+          <li><strong>Support communications:</strong> information you include when contacting us for assistance or making a privacy request.</li>
+        </ul>
+        <p>Please avoid entering sensitive personal information into fields that do not require it for your business operations.</p>
+      </section>
+
+      <section class="policy-section" id="use">
+        <h2 class="section-title">2. How We Use Information</h2>
+        <p>We use information for purposes related to operating and improving KUSOX, including to:</p>
+        <ul>
+          <li>Provide the application's features and manage user accounts and projects.</li>
+          <li>Store and synchronize business data where supported by the selected plan and features.</li>
+          <li>Process subscriptions and payments, and maintain transaction records.</li>
+          <li>Respond to support requests and communicate about account or service issues.</li>
+          <li>Maintain, troubleshoot, and improve application performance, reliability, and security.</li>
+          <li>Detect misuse and help protect the service and its users.</li>
+        </ul>
+        <p>We do not describe every possible use here; information is handled in connection with the service you choose to use and applicable legal requirements.</p>
+      </section>
+
+      <section class="policy-section" id="storage">
+        <h2 class="section-title">3. Data Storage and Third-Party Services</h2>
+        <p>KUSOX uses third-party service providers to help operate parts of the service:</p>
+        <ul>
+          <li><strong>Firebase:</strong> used for data storage and related application infrastructure.</li>
+          <li><strong>Paddle:</strong> used for payment processing and subscription-related transactions.</li>
+        </ul>
+        <p>These providers may process information as needed to deliver their services and are subject to their own terms and privacy practices. Please review their privacy documentation for details about their processing.</p>
+        <p>Some KUSOX features or plans may work differently regarding local storage, cloud storage, or synchronization. Information stored only on your device may not be available to us in the same way as information stored through online services.</p>
+      </section>
+
+      <section class="policy-section" id="sharing">
+        <h2 class="section-title">4. How Information Is Shared</h2>
+        <p>We may share information with service providers such as Firebase and Paddle when necessary to provide the service, store data, or process payments. We may also disclose information where required by law or where reasonably necessary to protect the rights, safety, and security of KUSOX, our users, or others.</p>
+        <p>We do not sell your personal information as a product. We do not make your business data public through this Privacy Policy.</p>
+      </section>
+
+      <section class="policy-section" id="security">
+        <h2 class="section-title">5. Data Security</h2>
+        <p>We apply reasonable measures intended to protect information against unauthorized access, loss, misuse, or alteration. However, no application, internet transmission, or storage system can be guaranteed to be completely secure.</p>
+        <p>You are responsible for keeping your account credentials confidential, using appropriate access controls, and ensuring that people who can access your device or project are authorized to do so. Never send your password by email.</p>
+      </section>
+
+      <section class="policy-section" id="retention">
+        <h2 class="section-title">6. Data Retention and Deletion</h2>
+        <p>We retain information for as long as reasonably necessary to provide the service, maintain relevant account and transaction records, resolve support issues, and meet applicable legal or operational requirements.</p>
+        <p>You can request deletion of your account, a project, or specified project data by contacting our support team. Please send the request from the email address associated with your KUSOX account and identify the project or data you want deleted.</p>
+        <p>Submitting a request does not automatically delete data. We may need to verify your request before taking action. Some records may need to be retained where required by law or for legitimate transaction and security purposes.</p>
+        <div class="notice">
+          To request deletion, visit <a href="/delete_my_data">kusox.com/delete_my_data</a> and follow the instructions on that page.
+        </div>
+      </section>
+
+      <section class="policy-section" id="rights">
+        <h2 class="section-title">7. Your Choices and Rights</h2>
+        <p>Depending on your location and applicable law, you may be able to request access to, correction of, or deletion of personal information associated with your account.</p>
+        <p>To make a request, contact us using the email address below. Please describe your request clearly and use the email address associated with your KUSOX account so we can help verify ownership. We may ask for additional information when reasonably necessary to process the request securely.</p>
+      </section>
+
+      <section class="policy-section" id="children">
+        <h2 class="section-title">8. Children's Privacy</h2>
+        <p>KUSOX is designed for business and point-of-sale use, not specifically for children. If you believe a child has provided personal information to us, please contact us so we can review the situation and take appropriate steps where required.</p>
+      </section>
+
+      <section class="policy-section" id="changes">
+        <h2 class="section-title">9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy as KUSOX features, service providers, or legal requirements change. When we update it, we will revise the “Last updated” date at the top of this page. Please review this page periodically for the latest version.</p>
+      </section>
+
+      <section class="policy-section" id="contact">
+        <h2 class="section-title">10. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or want to submit a privacy request, contact KUSOX support:</p>
+        <div class="contact-box">
+          <p>Email</p>
+          <a class="contact-email" href="mailto:contact@kusox.com">contact@kusox.com</a>
+          <p style="margin-top:12px; margin-bottom:0;">For account or data-deletion requests, you may also contact <a href="mailto:support@kusox.com">support@kusox.com</a>.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KUSOX SOFTWARE. All rights reserved.</p>
+    <p><a href="/">Visit kusox.com</a> &nbsp; | &nbsp; <a href="mailto:contact@kusox.com">Contact Us</a> &nbsp; | &nbsp; <a href="/delete_my_data">Data Deletion</a></p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -1,50 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRC76MS0VD"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-     
-       gtag('config', 'G-GRC76MS0VD');
-     </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KUSOX TERM OF SERVICE</title>
-<meta property="og:description" content="Be careful to read kusox term of service">
-    <!-- Website Icon -->
-    <link rel="icon" type="image/png" href="images/app_icon.ico">
-<style>
-body { font-family: Arial, sans-serif; background: #f9f9f9; color: #222;
-padding: 40px; line-height: 1.6; }
-h1, h2 { color: #111; }
-.container { max-width: 900px; margin: auto; background: #fff; padding:
-30px; border-radius: 8px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | KUSOX SOFTWARE</title>
+  <meta name="description" content="Read the KUSOX SOFTWARE Terms of Service covering use of the point-of-sale system, accounts, subscriptions, acceptable use, service availability, and support.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#141414">
+  <link rel="icon" href="images/app_icon.ico">
+  <style>
+    :root {
+          --bg-main: #f5f6fa;
+          --bg-card: #ffffff;
+          --bg-soft: #f8f9fc;
+          --accent: #f77062;
+          --text-main: #222831;
+          --text-muted: #626b78;
+          --border: #e1e5eb;
+        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      min-height: 100vh; display: flex; flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif; background: var(--bg-main);
+      color: var(--text-main); line-height: 1.75;
+    }
+    a { color: var(--accent); }
+    a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    header { width: 100%; padding: 20px 6%; border-bottom: 1px solid var(--border); }
+    .header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { display: block; width: 180px; max-width: 65%; height: auto; object-fit: contain; }
+    .home-link { color: var(--text-muted); text-decoration: none; font-size: 14px; }
+    .home-link:hover, footer a:hover { color: var(--accent); }
+    main { width: 100%; flex: 1; padding: 54px 20px 64px; }
+    .terms-card {
+      width: 100%; max-width: 900px; margin: 0 auto; padding: 46px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 18px; box-shadow: 0 15px 45px rgba(0,0,0,.2);
+    }
+    .eyebrow {
+      display: inline-block; margin-bottom: 12px; padding: 5px 11px;
+      border: 1px solid rgba(247,112,98,.35); border-radius: 999px;
+      background: rgba(247,112,98,.08); color: var(--accent);
+      font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    }
+    h1 { margin-bottom: 8px; font-size: clamp(29px, 4vw, 40px); line-height: 1.25; }
+    .updated { margin-bottom: 22px; color: var(--text-muted); font-size: 13px; }
+    .intro { margin-bottom: 25px; color: var(--text-muted); font-size: 16px; }
+    .contents { margin: 24px 0 30px; padding: 20px 22px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-soft); }
+    .contents h2 { margin: 0 0 10px; font-size: 16px; }
+    .contents ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 22px; padding-left: 19px; }
+    .contents li { color: var(--text-muted); padding-left: 2px; }
+    .contents a { color: var(--text-muted); text-decoration: none; }
+    .contents a:hover { color: var(--accent); }
+    .terms-section { padding-top: 22px; margin-top: 22px; border-top: 1px solid var(--border); }
+    h2.section-title { margin-bottom: 10px; font-size: 20px; line-height: 1.4; }
+    p { margin: 0 0 12px; }
+    .terms-section p, .terms-section li { color: var(--text-muted); }
+    .terms-section ul { padding-left: 23px; margin: 10px 0 14px; }
+    .terms-section li { margin: 7px 0; padding-left: 3px; }
+    strong { color: var(--text-main); }
+    .notice { margin-top: 18px; padding: 16px 18px; border-left: 3px solid var(--accent); border-radius: 5px; background: rgba(247,112,98,.06); color: var(--text-muted); font-size: 14px; }
+    .contact-box { margin-top: 16px; padding: 20px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px; }
+    .contact-box p { color: var(--text-muted); }
+    .contact-email { font-size: 18px; font-weight: 700; text-decoration: none; overflow-wrap: anywhere; }
+    footer { padding: 22px 20px; border-top: 1px solid var(--border); color: var(--text-muted); text-align: center; font-size: 13px; }
+    footer p { margin: 4px 0; }
+    footer a { color: var(--text-main); text-decoration: none; }
+    @media (max-width: 650px) {
+      header { padding: 16px 20px; } .logo { width: 145px; } .home-link { font-size: 12px; }
+      main { padding: 28px 14px 38px; } .terms-card { padding: 28px 21px; border-radius: 14px; }
+      .intro { font-size: 14px; } .contents ul { grid-template-columns: 1fr; } h2.section-title { font-size: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-<h1>Terms of Service</h1>
-<p><strong>Last updated:</strong>02-11-2025</p>
-<h2>1. Service Description</h2>
-<p>This POS system provides sales, inventory, reporting, and payment tools
-across Web, Android, and Desktop platforms.</p>
-<h2>2. Accounts</h2>
-<p>You are responsible for maintaining the confidentiality of your account
-and all activities under it.</p>
-<h2>3. Payments</h2>
-<p>Payments are processed through third-party providers such as Paddle. We
-do not store card details.</p>
-<h2>4. Acceptable Use</h2>
-<p>You agree not to misuse the system or perform illegal activities.</p>
-<h2>5. Termination</h2>
-<p>We may suspend or terminate accounts that violate these terms.</p>
-<h2>6. Limitation of Liability</h2>
-<p>We are not liable for indirect or consequential damages.</p>
-<h2>7. Contact</h2>
-<p>Email: contact@kusox.com</p>
-</div>
+  <header>
+    <div class="header-content">
+      <a href="/" aria-label="KUSOX home"><img src="images/logo_tall.png" alt="KUSOX SOFTWARE" class="logo"></a>
+      <a href="/" class="home-link">Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="terms-card" aria-labelledby="page-title">
+      <span class="eyebrow">Terms &amp; conditions</span>
+      <h1 id="page-title">Terms of Service</h1>
+      <p class="updated">Last updated: October 24, 2026</p>
+      <p class="intro">
+        These Terms of Service govern your access to and use of KUSOX SOFTWARE and its point-of-sale
+        services. By accessing or using KUSOX, you agree to these Terms. If you do not agree, please
+        do not use the service.
+      </p>
+
+      <nav class="contents" aria-label="Terms contents">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#service">Service description</a></li>
+          <li><a href="#acceptance">Acceptance of terms</a></li>
+          <li><a href="#accounts">Accounts and security</a></li>
+          <li><a href="#plans">Plans, trials, and subscriptions</a></li>
+          <li><a href="#payments">Payments and billing</a></li>
+          <li><a href="#acceptable-use">Acceptable use</a></li>
+          <li><a href="#your-data">Your data</a></li>
+          <li><a href="#availability">Service availability</a></li>
+          <li><a href="#termination">Suspension and termination</a></li>
+          <li><a href="#liability">Limitation of liability</a></li>
+          <li><a href="#changes">Changes to these terms</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="terms-section" id="service">
+        <h2 class="section-title">1. Service Description</h2>
+        <p>KUSOX is a point-of-sale (POS) system that provides business tools such as sales management, inventory and stock tracking, tickets and receipts, reporting, and cashier or project management features across supported Web, Android, and Desktop platforms.</p>
+        <p>Features and limits may vary by platform, subscription plan, configuration, and version. We may update or modify features over time to maintain or improve the service.</p>
+      </section>
+
+      <section class="terms-section" id="acceptance">
+        <h2 class="section-title">2. Acceptance of Terms</h2>
+        <p>By creating an account, accessing, or using KUSOX, you confirm that you have read and agree to these Terms and the applicable <a href="/privacy.html">Privacy Policy</a>. If you use KUSOX on behalf of a business or organization, you confirm that you are authorized to act on its behalf.</p>
+      </section>
+
+      <section class="terms-section" id="accounts">
+        <h2 class="section-title">3. Accounts and Security</h2>
+        <ul>
+          <li>You are responsible for providing accurate account information and keeping it up to date.</li>
+          <li>You must keep your password and sign-in credentials confidential.</li>
+          <li>You are responsible for activities carried out through your account and for managing access granted to employees, cashiers, or other users.</li>
+          <li>You should notify KUSOX support promptly if you suspect unauthorized access or a security issue affecting your account.</li>
+        </ul>
+        <p>Do not share account access with people who are not authorized to use your project, and use available account and role settings to manage permissions appropriately.</p>
+      </section>
+
+      <section class="terms-section" id="plans">
+        <h2 class="section-title">4. Plans, Trials, and Subscriptions</h2>
+        <p>KUSOX may offer different plans, trial periods, or feature levels. The features, usage limits, and duration available to you are those presented in the application or on the applicable offer when you select the plan.</p>
+        <p>A trial or promotional offer may be subject to specific conditions and may end at the time indicated in the offer. Continued access to paid features may require an active subscription and successful payment. Please review the details shown before purchasing or activating a plan.</p>
+      </section>
+
+      <section class="terms-section" id="payments">
+        <h2 class="section-title">5. Payments and Billing</h2>
+        <p>Where paid plans are offered, prices, billing periods, and applicable conditions are presented during the purchase process. Payments may be processed by third-party providers such as Paddle. KUSOX does not store full payment card details on its own systems; payment information is handled by the relevant payment provider under its own terms and privacy practices.</p>
+        <p>You are responsible for reviewing the selected plan, price, billing period, and any applicable taxes before confirming a purchase. For questions about a transaction or subscription, contact support and include relevant transaction details, but never send your password or full card information.</p>
+        <p>Refunds, cancellations, and subscription changes are handled according to the terms presented at purchase and any applicable law. If the offer does not explain a particular case, contact support for assistance.</p>
+      </section>
+
+      <section class="terms-section" id="acceptable-use">
+        <h2 class="section-title">6. Acceptable Use</h2>
+        <p>You agree to use KUSOX lawfully and responsibly. You must not:</p>
+        <ul>
+          <li>Use the service for illegal, fraudulent, deceptive, or unauthorized activities.</li>
+          <li>Attempt to gain unauthorized access to accounts, systems, projects, or data belonging to other users.</li>
+          <li>Interfere with the service, attempt to bypass security controls, or disrupt its operation.</li>
+          <li>Upload or transmit malicious code or use the service in a way that harms other users or the service.</li>
+          <li>Copy, resell, or redistribute the service or its components except where expressly permitted by applicable law or written authorization.</li>
+        </ul>
+        <p>You are responsible for ensuring that the information you enter into KUSOX and your use of that information comply with applicable laws.</p>
+      </section>
+
+      <section class="terms-section" id="your-data">
+        <h2 class="section-title">7. Your Data</h2>
+        <p>You are responsible for the business information you enter, import, or manage through KUSOX, including ensuring that you have the rights and permissions necessary to use it. You should review your records and maintain any independent backups needed for your business operations.</p>
+        <p>KUSOX may process and store information as necessary to provide the features you use. Storage and synchronization can depend on the plan, platform, and configuration. You should not assume that data stored locally on a device is automatically backed up or synchronized to the cloud.</p>
+        <p>For details about information handling, storage, and deletion requests, read our <a href="/privacy.html">Privacy Policy</a>. To request deletion of an account, project, or specified data, visit <a href="/delete_my_data">Data Deletion</a>.</p>
+      </section>
+
+      <section class="terms-section" id="availability">
+        <h2 class="section-title">8. Service Availability and Changes</h2>
+        <p>We aim to keep KUSOX available and functioning, but we do not guarantee uninterrupted or error-free service. Access may be affected by internet connectivity, device or operating-system issues, maintenance, third-party services, or events outside our reasonable control.</p>
+        <p>We may update, maintain, modify, or discontinue particular features when reasonably necessary. Where practical, we will seek to minimize disruption, but we cannot guarantee that every feature or version will remain available indefinitely.</p>
+      </section>
+
+      <section class="terms-section" id="termination">
+        <h2 class="section-title">9. Suspension and Termination</h2>
+        <p>We may suspend or terminate access where we reasonably believe an account has violated these Terms, is being used unlawfully, creates a security risk, or threatens the service or other users. Where appropriate and practical, we may provide notice or an opportunity to resolve the issue.</p>
+        <p>You may stop using KUSOX at any time. Stopping use does not necessarily cancel a paid subscription or automatically delete stored data; use the relevant subscription controls or contact support as applicable. Data deletion requests are handled according to our Privacy Policy.</p>
+      </section>
+
+      <section class="terms-section" id="liability">
+        <h2 class="section-title">10. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, KUSOX SOFTWARE will not be liable for indirect, incidental, special, consequential, or punitive damages, or for loss of profits, revenue, business opportunities, or data arising from or related to use of, or inability to use, the service.</p>
+        <p>KUSOX is a business tool and does not replace your responsibility to verify sales records, stock levels, reports, receipts, and other operational information. You should maintain appropriate backups and business controls.</p>
+        <p>Nothing in these Terms excludes or limits liability where doing so would be unlawful under applicable law.</p>
+      </section>
+
+      <section class="terms-section" id="changes">
+        <h2 class="section-title">11. Changes to These Terms</h2>
+        <p>We may revise these Terms as the service, features, or legal requirements change. The latest version will be published on this page with an updated date. Your continued use of KUSOX after revised Terms are published indicates acceptance of the updated Terms to the extent permitted by applicable law. If you do not agree, you should stop using the service.</p>
+      </section>
+
+      <section class="terms-section" id="contact">
+        <h2 class="section-title">12. Contact</h2>
+        <p>If you have questions about these Terms, billing, or access to KUSOX, contact our team:</p>
+        <div class="contact-box">
+          <p>Email</p>
+          <a class="contact-email" href="mailto:contact@kusox.com">contact@kusox.com</a>
+          <p style="margin-top:12px; margin-bottom:0;">For account and technical support, you can also email <a href="mailto:support@kusox.com">support@kusox.com</a>.</p>
+        </div>
+      </section>
+
+      <div class="notice">
+        These Terms are intended as general service terms and are not legal advice. Please review them to ensure they match your actual plans, billing rules, refund process, and applicable legal obligations before publishing.
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KUSOX SOFTWARE. All rights reserved.</p>
+    <p><a href="/">Visit kusox.com</a> &nbsp; | &nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp; | &nbsp; <a href="/delete_my_data">Data Deletion</a> &nbsp; | &nbsp; <a href="mailto:contact@kusox.com">Contact Us</a></p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
