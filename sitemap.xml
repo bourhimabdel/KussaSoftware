@@ -1,0 +1,58 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Main website -->
+    <url>
+        <loc>https://kusox.com/</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/download</loc>
+    </url>
+
+    <!-- Blog homepage -->
+    <url>
+        <loc>https://kusox.com/blog/</loc>
+    </url>
+
+    <!-- Blog articles -->
+    <url>
+        <loc>https://kusox.com/blog/free-pos-for-restaurants.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/inventory-management.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/barcode-scanner-guide.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/pos-vs-cash-register.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/how-to-reduce-stock-loss.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/daily-sales-report-guide.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/offline-pos-system-guide.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/blog/choose-pos-for-small-business.html</loc>
+    </url>
+
+    <!-- Legal pages -->
+    <url>
+        <loc>https://kusox.com/privacy.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/terms.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/refund.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/delete_my_data</loc>
+    </url>
+
+</urlset>
