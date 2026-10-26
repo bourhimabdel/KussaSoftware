@@ -1,32 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head> 
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRC76MS0VD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-GRC76MS0VD');
-    </script>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUSOX DOWNLOAD APPLICATION</title>
-    <meta property="og:description" content="DOWNLOAD KUSOX APPLICATION for Android | ios | window">
-    <!-- Website Icon -->
-    <link rel="icon" type="image/png" href="images/app_icon.ico">
-   
-    <link rel="stylesheet" href="downloadStyle.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download KUSOX Point of Sale for Android, iPhone and Windows.">
+  <title>Download KUSOX POS</title>
+  <link rel="canonical" href="https://kusox.com/download">
+  <link rel="icon" href="images/app_icon.ico">
+  <link rel="stylesheet" href="download.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="KUSOX home">
+      <img src="images/logo_tall.png" alt="KUSOX Software">
+    </a>
+    <a class="header-link" href="/">Home</a>
+  </header>
 
-<div id="versions"></div>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="scriptDownload.js"></script>
+  <main class="page">
+    <div id="availability-message" class="availability-message" role="status" aria-live="polite" hidden></div>
 
+    <section class="intro">
+      <p class="eyebrow">KUSOX POINT OF SALE</p>
+      <h1>Choose your platform</h1>
+      <p class="subtitle">Get KUSOX POS for your device and manage your business wherever you work.</p>
+    </section>
+
+    <section class="platforms" aria-label="Download options">
+      <article class="platform-card">
+        <div class="platform-icon android" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M14.2 16.4 10.8 10.5a1.2 1.2 0 0 1 2.1-1.2l3.6 6.2a19 19 0 0 1 15 0l3.6-6.2a1.2 1.2 0 0 1 2.1 1.2l-3.4 5.9A15.8 15.8 0 0 1 40 28H8a15.8 15.8 0 0 1 6.2-11.6ZM15 31h18v6.2a3 3 0 0 1-3 3h-1v4a1.8 1.8 0 0 1-3.6 0v-4h-2.8v4a1.8 1.8 0 0 1-3.6 0v-4h-1a3 3 0 0 1-3-3V31ZM4 28a2.5 2.5 0 0 1 5 0v8a2.5 2.5 0 0 1-5 0v-8Zm35 0a2.5 2.5 0 0 1 5 0v8a2.5 2.5 0 0 1-5 0v-8ZM17.8 22a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4Zm12.4 0a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4Z"/></svg>
+        </div>
+        <h2>Android</h2>
+        <p>Install KUSOX POS on your Android phone or tablet.</p>
+        <button class="platform-button" type="button" onclick="showComingSoon('Android')">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 2.7c-.4.4-.6 1-.6 1.8v15c0 .8.2 1.4.6 1.8L12 12 3.2 2.7Z"/><path d="m14.1 14.1-9.3 5.3c-.2.1-.4.2-.6.1L12 12l2.1 2.1Z"/><path d="M20.1 10.1 16 7.8 12 12l2.1 2.1 6-3.4c1-.5 1-1.1 0-1.6Z"/><path d="M4.2 2.5c.2 0 .4 0 .6.2L16 7.8 12 12 3.2 2.7c.3-.2.6-.3 1-.2Z"/></svg>
+          <span>Coming soon</span>
+        </button>
+      </article>
+
+      <article class="platform-card">
+        <div class="platform-icon apple" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M32.5 25.4c0-4.1 3.3-6.1 3.5-6.2-1.9-2.8-4.9-3.2-6-3.3-2.5-.3-4.9 1.5-6.2 1.5s-3.3-1.5-5.4-1.4c-2.8 0-5.4 1.6-6.8 4.1-2.9 5-.7 12.4 2.1 16.5 1.4 2 3 4.2 5.1 4.1 2-.1 2.8-1.3 5.3-1.3s3.2 1.3 5.4 1.2c2.2 0 3.6-2 4.9-4.1a18 18 0 0 0 2.2-4.6c-.1 0-4.1-1.6-4.1-6.5ZM28.4 13.2c1.1-1.4 1.8-3.3 1.6-5.2-1.6.1-3.6 1.1-4.8 2.5-1.1 1.2-2 3.1-1.7 4.9 1.8.1 3.7-.9 4.9-2.2Z"/></svg>
+        </div>
+        <h2>iPhone &amp; iPad</h2>
+        <p>Find KUSOX POS for Apple devices in the App Store.</p>
+        <button class="platform-button" type="button" onclick="showComingSoon('iOS')">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.8c0-2 1.6-3 1.7-3.1-1-1.4-2.5-1.6-3.1-1.7-1.3-.2-2.5.8-3.2.8-.6 0-1.7-.8-2.8-.7-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.4 1.1 8.5.7 1 1.5 2.2 2.6 2.1 1-.1 1.5-.7 2.7-.7s1.7.7 2.8.7 1.9-1 2.5-2.1c.4-.6.7-1.3.9-1.9-.1 0-2.7-1.1-2.7-4ZM14.3 6.5c.6-.7.9-1.7.8-2.7-.8.1-1.9.6-2.5 1.3-.6.6-1 1.6-.9 2.5.9.1 1.9-.5 2.6-1.1Z"/></svg>
+          <span>Coming soon</span>
+        </button>
+      </article>
+
+      <article class="platform-card">
+        <div class="platform-icon windows" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M5 10.3 21 8v14H5V10.3Zm18-2.6 20-2.9V22H23V7.7ZM5 25h16v14L5 36.7V25Zm18 0h20v17.2l-20-2.9V25Z"/></svg>
+        </div>
+        <h2>Windows</h2>
+        <p>Download the KUSOX POS installer directly to your computer.</p>
+        <a class="platform-button" href="downloads/kusoxWindowsApp.exe">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4.5 10.5 3v8H2v-6.5ZM12 2.8 22 1v10H12v-8.2ZM2 13h8.5v8L2 19.5V13Zm10 0h10v10l-10-1.8V13Z"/></svg>
+          <span>Download for Windows</span>
+        </a>
+        <p class="small-note">The installer will download directly to your device.</p>
+      </article>
+    </section>
+
+    <p class="help">Need help? Contact <a href="mailto:support@kusox.com">support@kusox.com</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> KUSOX SOFTWARE</span>
+    <nav aria-label="Legal links">
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="mailto:support@kusox.com">Support</a>
+    </nav>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function showComingSoon(platform) {
+      const message = document.getElementById('availability-message');
+      message.textContent = `The KUSOX app for ${platform} will be available soon. Please check back later.`;
+      message.hidden = false;
+      message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
 </body>
 </html>
