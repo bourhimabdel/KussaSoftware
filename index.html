@@ -1,408 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-     <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRC76MS0VD"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-     
-       gtag('config', 'G-GRC76MS0VD');
-     </script>
-     
-    <!-- Include Paddle.js -->
-    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-    <script type="text/javascript">
-      
-      Paddle.Initialize({
-        token: "live_7740a16c8a8a30cd8a8cc303a2b",
-      });
-       
-    </script>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUSOX POINT OF SALE APPLICATION</title>
-
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="POS application, point of sale, free POS software, free caisse application, cash register software, restaurant POS, cafe POS, retail POS, inventory management, stock management, sales management, barcode scanner, receipt printing, Flutter POS, web POS, restaurant management system, shop management software, business management software, invoicing software, SME software, Morocco POS, Arabic POS, English POS">    <meta property="og:title" content="FMI NABIH">
-    <meta property="og:description" content="KUSOX is a modern and free retail management system that helps businesses manage sales, inventory, customers, and reports with an easy-to-use interface.">
-    <meta property="og:type" content="website">
-
-    <!-- Website Icon -->
-    <link rel="icon" type="image/png" href="images/app_icon.ico">
-    <LINK rel='stylesheet' href="styles.css" />
-    <link rel="stylesheet"
-       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-</head>
-<body class="light">
+   <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRC76MS0VD"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
  
+   gtag('config', 'G-GRC76MS0VD');
+ </script>
+ 
+<!-- Include Paddle.js -->
+ <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+ <script type="text/javascript">
+  
+  Paddle.Initialize({
+    token: "live_7740a16c8a8a30cd8a8cc303a2b",
+  });
+   
+ </script> 
 
-    <!-- NAVEBAR SECTION -->
-    <nav class="navbar">
-        <div class="navbar__container">
-    
-           
-            <a href="/" id="navbar__logo">
-                <img src="images/logo_tall.png" alt="NEXT Logo" class="logo-img">
-            </a>
-            <a href="download.html" class="button">
-                <i class="fas fa-download"></i> Download
-              </a>
-        </div>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f6fa">
+  <meta name="robots" content="index, follow">
+  <title>KUSOX POS | Point of Sale Software for Retail and Restaurants</title>
+  <meta name="description" content="Manage sales, products, stock, cashiers and receipts with KUSOX Point of Sale software for retail shops and restaurants.">
+  <meta name="keywords" content="POS software, point of sale, retail POS, restaurant POS, shop management, inventory management, stock management, sales management, receipt printing, Arabic POS, Morocco POS">
+  <link rel="canonical" href="https://kusox.com/">
+  <meta property="og:title" content="KUSOX POS | Point of Sale Software">
+  <meta property="og:description" content="A practical point of sale system to manage sales, stock, products, cashiers and receipts for retail shops and restaurants.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kusox.com/">
+  <meta property="og:image" content="https://kusox.com/images/dashboard_page.png">
+  <link rel="icon" href="images/app_icon.ico">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --accent: #f77062;
+  --accent-dark: #e85f52;
+  --ink: #17191f;
+  --muted: #68707e;
+  --paper: #f5f6fa;
+  --white: #ffffff;
+  --line: #e5e7ed;
+  --dark: #17191f;
+  --radius: 22px;
+  --shadow: 0 22px 65px rgba(22, 26, 38, .10);
+  --container: 1160px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { font-family: 'DM Sans', Arial, sans-serif; color: var(--ink); background: var(--white); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid rgba(247,112,98,.55); outline-offset: 4px; }
+.container { width: min(var(--container), calc(100% - 48px)); margin-inline: auto; }
+.section-pad { padding: 100px 0; }
+h1, h2, h3 { font-family: 'Manrope', 'DM Sans', sans-serif; letter-spacing: -.045em; line-height: 1.15; }
+h2 { font-size: clamp(30px, 4vw, 45px); font-weight: 800; }
+p { color: var(--muted); }
+
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92); border-bottom: 1px solid rgba(229,231,237,.8); backdrop-filter: blur(18px); }
+.navbar { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; flex-shrink: 0; }
+.logo-img { width: 164px; max-height: 54px; object-fit: contain; object-position: left center; }
+.nav-links { display: flex; align-items: center; gap: 34px; }
+.nav-links > a:not(.button) { color: #515866; font-size: 14px; font-weight: 600; transition: color .2s ease; }
+.nav-links > a:not(.button):hover { color: var(--accent-dark); }
+.button { min-height: 52px; display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 0 22px; border: 1px solid var(--accent); border-radius: 10px; background: var(--accent); color: #17191f; font-size: 14px; font-weight: 700; box-shadow: 0 8px 20px rgba(247,112,98,.16); transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.button:hover { transform: translateY(-2px); background: #ff8477; box-shadow: 0 12px 25px rgba(247,112,98,.24); }
+.button-small { min-height: 43px; padding-inline: 17px; }
+.button-secondary { background: white; border-color: #dfe2e9; color: var(--ink); box-shadow: none; }
+.button-secondary:hover { background: #fff7f6; border-color: #f8b2aa; box-shadow: none; }
+.menu-toggle { display: none; border: 0; background: transparent; color: var(--ink); font-size: 23px; cursor: pointer; }
+
+.hero { position: relative; overflow: hidden; padding-top: 85px; padding-bottom: 32px; background: radial-gradient(ellipse at 83% 38%, rgba(247,112,98,.12), transparent 34%), linear-gradient(180deg, #fbfbfd 0%, #f5f6fa 100%); }
+.hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 55px; min-height: 440px; }
+.hero-copy { position: relative; z-index: 2; padding-bottom: 20px; }
+.eyebrow { display: flex; align-items: center; gap: 9px; color: var(--accent-dark); font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 19px; }
+.eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(247,112,98,.13); }
+.hero h1 { max-width: 610px; font-size: clamp(42px, 5.4vw, 68px); font-weight: 800; letter-spacing: -.065em; line-height: 1.06; }
+.hero h1 span { color: var(--accent-dark); }
+.hero-description { max-width: 510px; margin-top: 24px; font-size: 17px; line-height: 1.8; }
+.hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.hero-points { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 27px; }
+.hero-points span { display: inline-flex; align-items: center; gap: 7px; color: #555d6b; font-size: 12px; font-weight: 600; }
+.hero-points i { color: #2f9b70; font-size: 12px; }
+.hero-visual { position: relative; min-width: 0; padding: 25px 0 40px 18px; }
+.visual-glow { position: absolute; width: 80%; height: 70%; right: 0; top: 13%; background: rgba(247,112,98,.2); filter: blur(60px); border-radius: 50%; }
+.visual-window { position: relative; z-index: 1; overflow: hidden; border: 1px solid rgba(255,255,255,.85); border-radius: 15px; background: white; box-shadow: 0 30px 80px rgba(24,29,43,.19); transform: perspective(1200px) rotateY(-3deg) rotateX(1deg); }
+.window-top { height: 36px; display: flex; align-items: center; gap: 6px; padding: 0 13px; border-bottom: 1px solid #eceef2; background: #fff; }
+.window-top > span { width: 7px; height: 7px; border-radius: 50%; background: #d9dce3; }
+.window-top > span:first-child { background: #f3a49b; }
+.window-top p { margin-left: auto; margin-right: auto; font-size: 10px; font-weight: 600; color: #858b96; }
+.visual-window img { width: 100%; height: auto; }
+.floating-note { position: absolute; z-index: 3; left: -5px; bottom: 4px; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border: 1px solid rgba(231,233,239,.9); border-radius: 13px; background: rgba(255,255,255,.96); box-shadow: 0 14px 40px rgba(22,26,38,.13); }
+.note-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: #fff0ee; color: var(--accent-dark); }
+.floating-note strong, .floating-note small { display: block; }
+.floating-note strong { font-size: 12px; }
+.floating-note small { margin-top: 2px; color: var(--muted); font-size: 10px; }
+.hero-bottom { display: flex; align-items: center; gap: 15px; margin-top: 35px; color: #7c8390; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+.hero-line { width: 55px; height: 1px; background: #d9dce4; }
+
+.solutions { background: white; }
+.section-heading { max-width: 690px; margin-bottom: 48px; }
+.section-heading.centered { margin-inline: auto; text-align: center; }
+.section-heading.centered .eyebrow { justify-content: center; }
+.section-heading > p:last-child { margin-top: 16px; font-size: 16px; }
+.solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.solution-card { position: relative; isolation: isolate; overflow: hidden; min-height: 290px; padding: 35px; border: 1px solid var(--line); border-radius: var(--radius); background: #fafbfc; }
+.restaurant-card { background: #fff8f7; border-color: #f8e5e2; }
+.solution-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; color: var(--accent-dark); background: #fff0ee; font-size: 19px; }
+.card-kicker { margin-top: 25px; color: #8a909c; font-size: 10px; font-weight: 800; letter-spacing: .15em; }
+.solution-card h3 { margin-top: 8px; font-size: 26px; }
+.solution-card > p:not(.card-kicker) { position: relative; z-index: 2; max-width: 430px; margin-top: 12px; font-size: 14px; }
+.text-link { position: relative; z-index: 2; display: inline-flex; gap: 9px; align-items: center; margin-top: 23px; color: var(--accent-dark); font-size: 13px; font-weight: 700; }
+.text-link i { transition: transform .2s ease; }
+.text-link:hover i { transform: translateX(4px); }
+.card-decoration { position: absolute; z-index: -1; right: 20px; bottom: -27px; font-size: 125px; color: rgba(247,112,98,.075); transform: rotate(-13deg); }
+.decoration-food { color: rgba(247,112,98,.11); transform: rotate(12deg); }
+
+.features { background: var(--paper); }
+.features .section-heading { margin-bottom: 28px; }
+.feature-row { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 70px; padding: 58px 0; border-bottom: 1px solid #e3e6ed; }
+.feature-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.feature-row.reverse .feature-copy { order: 2; }
+.feature-row.reverse .feature-image { order: 1; }
+.feature-number { display: inline-block; margin-bottom: 17px; color: var(--accent-dark); font-size: 12px; font-weight: 800; letter-spacing: .13em; }
+.feature-copy h3 { max-width: 450px; font-size: clamp(27px, 3vw, 36px); }
+.feature-copy > p { margin-top: 17px; font-size: 15px; line-height: 1.85; }
+.check-list { display: grid; gap: 10px; margin-top: 22px; list-style: none; }
+.check-list li { position: relative; padding-left: 25px; color: #4f5765; font-size: 13px; font-weight: 600; }
+.check-list li::before { content: '\f00c'; position: absolute; left: 0; top: 2px; display: grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: #e4f5ed; color: #26885e; font-family: 'Font Awesome 6 Free'; font-size: 9px; font-weight: 900; }
+.feature-image { overflow: hidden; border: 1px solid #e1e4eb; border-radius: 16px; background: white; box-shadow: 0 18px 45px rgba(27,32,44,.08); }
+.feature-image img { width: 100%; height: auto; }
+
+.language-section { background: var(--dark); color: white; overflow: hidden; }
+.language-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 65px; }
+.language-copy h2 { max-width: 450px; color: white; }
+.language-copy > p:not(.eyebrow) { margin-top: 18px; color: #b6bac4; font-size: 15px; }
+.language-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 25px; }
+.language-tags span { padding: 8px 12px; border: 1px solid #3c404a; border-radius: 8px; color: #f0f1f4; font-size: 12px; }
+.language-image { overflow: hidden; border: 1px solid #3c404a; border-radius: 15px; background: #22252d; box-shadow: 0 20px 60px rgba(0,0,0,.2); }
+.language-image img { width: 100%; height: auto; }
+.language-section .eyebrow { color: #ff958a; }
+
+.pricing-preview { padding: 65px 0; background: #fff0ee; }
+.pricing-preview-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+.pricing-preview h2 { max-width: 650px; font-size: clamp(27px, 3.5vw, 38px); }
+.pricing-preview p:not(.eyebrow) { margin-top: 12px; font-size: 14px; }
+.pricing-preview .eyebrow { margin-bottom: 12px; }
+.pricing-preview .button { flex-shrink: 0; }
+
+.final-cta { padding: 90px 0; text-align: center; background: white; }
+.final-cta-inner { max-width: 760px; }
+.cta-mark { display: grid; place-items: center; width: 58px; height: 58px; margin: 0 auto 23px; border: 1px solid #f4d8d4; border-radius: 17px; background: #fff4f2; }
+.cta-mark img { width: 34px; height: 34px; object-fit: contain; }
+.final-cta .eyebrow { justify-content: center; }
+.final-cta h2 { font-size: clamp(32px, 4vw, 46px); }
+.final-cta-inner > p:not(.eyebrow) { margin-top: 16px; font-size: 15px; }
+.centered-actions { justify-content: center; }
+.coming-soon { display: inline-flex; align-items: center; gap: 8px; padding: 0 4px; color: #7a818e; font-size: 13px; font-weight: 600; }
+
+.site-footer { padding: 60px 0 0; background: #f6f7fa; border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1fr; gap: 40px; padding-bottom: 45px; }
+.footer-brand .logo-img { width: 155px; }
+.footer-brand-col p { max-width: 270px; margin-top: 17px; font-size: 13px; }
+.footer-col { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; }
+.footer-col h3 { margin-bottom: 5px; font-size: 14px; letter-spacing: -.02em; }
+.footer-col a { color: #68707e; font-size: 12px; overflow-wrap: anywhere; transition: color .2s ease; }
+.footer-col a:hover { color: var(--accent-dark); }
+.footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; border-top: 1px solid #e2e5ec; }
+.footer-bottom p { font-size: 11px; }
+.social-links { display: flex; gap: 10px; }
+.social-links a { display: grid; place-items: center; width: 33px; height: 33px; border: 1px solid #e0e3e9; border-radius: 9px; color: #626a78; font-size: 13px; transition: background .2s ease, color .2s ease; }
+.social-links a:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
+
+@media (max-width: 980px) {
+  .nav-links { gap: 20px; }
+  .hero-grid { gap: 28px; }
+  .hero h1 { font-size: clamp(40px, 5.8vw, 58px); }
+  .hero-visual { padding-left: 0; }
+  .feature-row { gap: 38px; }
+  .language-grid { gap: 35px; }
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .footer-brand-col { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .container { width: min(100% - 36px, var(--container)); }
+  .section-pad { padding: 72px 0; }
+  .navbar { min-height: 72px; }
+  .logo-img { width: 142px; }
+  .menu-toggle { display: block; margin-left: auto; }
+  .nav-links { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; align-items: stretch; gap: 0; padding: 10px 18px 18px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 16px 25px rgba(20,24,35,.08); }
+  .nav-links.is-open { display: flex; flex-direction: column; }
+  .nav-links > a:not(.button) { padding: 12px 5px; border-bottom: 1px solid #f0f1f4; }
+  .nav-links .button { margin-top: 12px; }
+  .hero { padding-top: 65px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+  .hero-copy { padding-bottom: 0; }
+  .hero h1 { font-size: clamp(43px, 10vw, 62px); }
+  .hero-description { font-size: 15px; }
+  .hero-visual { margin: 0 0 15px; padding: 15px 0 30px; }
+  .visual-window { transform: none; }
+  .floating-note { left: 5px; bottom: 0; }
+  .hero-bottom { flex-wrap: wrap; margin-top: 28px; font-size: 9px; }
+  .solution-grid { grid-template-columns: 1fr; }
+  .solution-card { min-height: 265px; padding: 28px; }
+  .section-heading { margin-bottom: 35px; }
+  .section-heading > p:last-child { font-size: 14px; }
+  .feature-row, .feature-row.reverse { grid-template-columns: 1fr; gap: 25px; padding: 42px 0; }
+  .feature-row.reverse .feature-copy, .feature-row.reverse .feature-image { order: initial; }
+  .feature-copy h3 { font-size: 30px; }
+  .language-grid { grid-template-columns: 1fr; }
+  .pricing-preview-inner { align-items: flex-start; flex-direction: column; }
+  .pricing-preview .button { width: 100%; }
+  .final-cta { padding: 72px 0; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px 22px; }
+  .footer-brand-col { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .container { width: calc(100% - 28px); }
+  .hero-actions { align-items: stretch; flex-direction: column; }
+  .hero-actions .button { width: 100%; }
+  .hero-points { flex-direction: column; gap: 8px; }
+  .hero-bottom { gap: 9px; }
+  .hero-line { width: 25px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-brand-col { grid-column: auto; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; justify-content: center; padding: 18px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="KUSOX home">
+        <img src="images/logo_tall.png" alt="KUSOX Software" class="logo-img">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="./blog/">Blog</a>
+        <a class="button button-small" href="download.html"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- HERO SECTION -->
-    <div class="main">
-        <div class="main__container">
-            
-            <div class="main__content">
-                <h1 >KUSOX<br>POINT OF SALE</h1>
-                <h2>SOFTWARE</h2>
-                <p>See what makes us different.</p>
-               
-            
-            </div>
-
-            <div class="main__img--container">
-                <img src="images/dashboard_page.png" alt="pic" id="main__img">
-            </div>
+  <main>
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> POINT OF SALE SOFTWARE</p>
+          <h1>Run your business.<br><span>Simplify every sale.</span></h1>
+          <p class="hero-description">Manage products, sales, stock, cashiers and receipts with one practical POS application built for everyday business.</p>
+          <div class="hero-actions">
+            <a class="button" href="download.html"><i class="fa-brands fa-windows" aria-hidden="true"></i> Download for Windows</a>
+            <a class="button button-secondary" href="#features">Explore features <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          </div>
+          <div class="hero-points">
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> Sales and stock in one place</span>
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> Light and dark modes</span>
+            <span><i class="fa-solid fa-check" aria-hidden="true"></i> Multilingual interface</span>
+          </div>
         </div>
+        <div class="hero-visual">
+          <div class="visual-glow"></div>
+          <div class="visual-window">
+            <div class="window-top"><span></span><span></span><span></span><p>KUSOX Dashboard</p></div>
+            <img src="images/dashboard_page.png" alt="KUSOX point of sale dashboard showing business activity" fetchpriority="high">
+          </div>
+          <div class="floating-note"><span class="note-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span><span><strong>Business overview</strong><small>See activity at a glance</small></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>Built for daily business operations</span><span class="hero-line"></span><span>Retail shops · Cafés · Restaurants</span></div>
+    </section>
+
+    <section class="solutions section-pad" id="solutions">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">ONE SYSTEM, DIFFERENT BUSINESSES</p>
+          <h2>Designed around the way you work</h2>
+          <p>Keep everyday sales and stock tasks organised, whether you serve customers at a shop counter or in a food business.</p>
+        </div>
+        <div class="solution-grid">
+          <article class="solution-card retail-card">
+            <div class="solution-icon"><i class="fa-solid fa-store" aria-hidden="true"></i></div>
+            <p class="card-kicker">FOR RETAIL</p>
+            <h3>Keep your shop in control</h3>
+            <p>Organise your product catalogue, track stock changes, record sales and review tickets from one place.</p>
+            <a href="#features" class="text-link">Explore retail features <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="card-decoration decoration-retail" aria-hidden="true"><i class="fa-solid fa-boxes-stacked"></i></div>
+          </article>
+          <article class="solution-card restaurant-card">
+            <div class="solution-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+            <p class="card-kicker">FOR RESTAURANTS & CAFÉS</p>
+            <h3>Make counter sales simpler</h3>
+            <p>Give cashiers a straightforward sales workflow and create receipts that reflect your business identity.</p>
+            <a href="#features" class="text-link">Explore POS features <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="card-decoration decoration-food" aria-hidden="true"><i class="fa-solid fa-receipt"></i></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section-pad" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">TOOLS FOR YOUR DAILY WORK</p>
+          <h2>Everything you need to run the counter</h2>
+          <p>Useful tools for the tasks that keep your business moving, presented in a clear interface.</p>
+        </div>
+
+        <article class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-number">01</span>
+            <h3>A clear view of your business</h3>
+            <p>Review sales statistics and visual summaries from the dashboard. Filter activity by cashier and time period to better understand day-to-day performance.</p>
+            <ul class="check-list"><li>Sales overview and graphs</li><li>Filter by cashier</li><li>Review activity across time periods</li></ul>
+          </div>
+          <div class="feature-image"><img src="images/dashboard_page.png" alt="KUSOX dashboard and sales overview" loading="lazy"></div>
+        </article>
+
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <span class="feature-number">02</span>
+            <h3>Product and stock management</h3>
+            <p>Maintain your product catalogue, update prices and product information, and add stock when new items arrive.</p>
+            <ul class="check-list"><li>Add and update products</li><li>Manage stock changes</li><li>Keep product information organised</li></ul>
+          </div>
+          <div class="feature-image"><img src="images/product_page.png" alt="KUSOX product management screen" loading="lazy"></div>
+        </article>
+
+        <article class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-number">03</span>
+            <h3>Simple sales and ticket history</h3>
+            <p>Record sales through the cashier workflow and return to saved tickets when you need to review a transaction.</p>
+            <ul class="check-list"><li>Record customer purchases</li><li>Review previous tickets</li><li>Find transactions with ticket filters</li></ul>
+          </div>
+          <div class="feature-image"><img src="images/sale_and_add_to_stock_page.png" alt="KUSOX sales and stock workflow" loading="lazy"></div>
+        </article>
+
+        <article class="feature-row reverse">
+          <div class="feature-copy">
+            <span class="feature-number">04</span>
+            <h3>Manage cashiers and access</h3>
+            <p>Managers can organise cashier accounts, update their details and deactivate accounts when access is no longer needed.</p>
+            <ul class="check-list"><li>Manage cashier accounts</li><li>Control active accounts</li><li>Review cashier activity</li></ul>
+          </div>
+          <div class="feature-image"><img src="images/cashiers_page.png" alt="KUSOX cashier management screen" loading="lazy"></div>
+        </article>
+
+        <article class="feature-row">
+          <div class="feature-copy">
+            <span class="feature-number">05</span>
+            <h3>Receipts that fit your business</h3>
+            <p>Customise receipt details and add your business logo to create a more consistent customer-facing receipt.</p>
+            <ul class="check-list"><li>Custom receipt details</li><li>Add your business logo</li><li>Support for receipt workflows</li></ul>
+          </div>
+          <div class="feature-image"><img src="images/ticket_custom.png" alt="Customisable KUSOX receipt settings" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="language-section section-pad">
+      <div class="container language-grid">
+        <div class="language-copy">
+          <p class="eyebrow">MADE FOR MORE USERS</p>
+          <h2>Work in the language that suits you</h2>
+          <p>KUSOX supports multiple interface languages, including right-to-left layout support for Arabic, helping users work more comfortably.</p>
+          <div class="language-tags"><span>English</span><span>العربية</span><span>Français</span><span>Español</span></div>
+        </div>
+        <div class="language-image"><img src="images/multilanguage.png" alt="KUSOX multilingual and Arabic RTL interface" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="pricing-preview section-pad">
+      <div class="container pricing-preview-inner">
+        <div>
+          <p class="eyebrow">PLANS FOR DIFFERENT NEEDS</p>
+          <h2>Start with what your business needs</h2>
+          <p>Compare available plans, limits and features to find the right fit for your business.</p>
+        </div>
+        <a class="button" href="pricing.html">View plans and pricing <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <section class="final-cta section-pad">
+      <div class="container final-cta-inner">
+        <div class="cta-mark"><img src="images/app_icon.ico" alt="KUSOX application icon"></div>
+        <p class="eyebrow">GET STARTED WITH KUSOX</p>
+        <h2>Bring your daily operations into one place.</h2>
+        <p>Explore KUSOX and see how it can support your sales and stock workflow.</p>
+        <div class="hero-actions centered-actions">
+          <a class="button" href="download.html"><i class="fa-brands fa-windows" aria-hidden="true"></i> Download for Windows</a>
+          <span class="coming-soon"><i class="fa-brands fa-android" aria-hidden="true"></i> Android — Coming soon</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="/" aria-label="KUSOX home"><img src="images/logo_tall.png" alt="KUSOX Software" class="logo-img"></a>
+        <p>Point of sale software for retail shops, cafés and restaurants.</p>
+      </div>
+      <div class="footer-col"><h3>Explore</h3><a href="#solutions">Solutions</a><a href="#features">Features</a><a href="pricing.html">Pricing</a><a href="./blog/">Blog</a><a href="download.html">Downloads</a></div>
+      <div class="footer-col"><h3>Support</h3><a href="mailto:support@kusox.com?subject=KUSOX%20Support%20Request">support@kusox.com</a><a href="mailto:info@kusox.com?subject=KUSOX%20Information%20Request">info@kusox.com</a><a href="/delete_my_data">Data deletion</a></div>
+      <div class="footer-col"><h3>Legal</h3><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a></div>
     </div>
+    <div class="container footer-bottom"><p>© <span id="year"></span> KUSOX SOFTWARE. All rights reserved.</p><div class="social-links"><a href="https://www.facebook.com/share/18nAEw8FaB/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com/kussa_2026?igsh=YXV3YnJ4OHd6ZnBj" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div>
+  </footer>
 
-    
-    <!-- DIFINITION SECTION -->
-    <main class="page">
-        <div class="page__title">
-             <h2>Features in KUSOX</h2>
-        <p class="subtitle">See what makes KUSOX the best one.</p>
-        </div>
-       
-          
-        <section class="content-section">
-            <div class="text-zone">
-                <h2 class="title">1. Introduction – KUSOX System</h2>
-                <p class="description">
-                    KUSOX is a modern and responsive Point of Sale system designed to work smoothly on both mobile and desktop devices. It adapts perfectly to different screen sizes, ensuring a comfortable experience everywhere. The system offers both light and dark (night) modes to match user preferences and reduce eye strain. KUSOX is built to simplify daily business operations and improve speed at the counter. Its clean interface makes it easy for both managers and cashiers to use. The system focuses on performance, clarity, and reliability. With KUSSA, managing sales becomes more efficient and professional.
-                </p>
-            </div>
-    
-            <div class="image-zone">
-                <img src="images/login_page.png" alt="Sample Image">
-            </div>
-        </section>
-    
-        <section class="content-section">
-            <div class="image-zone">
-                <img src="images/dashboard_page.png" alt="Sample Image">
-            </div>
-
-            <div class="text-zone">
-                <h2 class="title">2. Smart Dashboard</h2>
-                <p class="description">
-                    The dashboard provides a clear and powerful overview of your business activity. It displays statistics and visual graphs that help you understand sales performance quickly. Data can be filtered by cashier, whether one specific cashier or all of them together. You can also analyze results by time period such as today, the last 7 days, or other ranges. This helps managers make better decisions based on real data. The dashboard updates dynamically to reflect current activity. It is the control center of the entire system.
-                </p>
-            </div>
-        </section>
-    
-        <section class="content-section">
-            <div class="text-zone">
-                <h2 class="title">3. Product Management</h2>
-                <p class="description">
-                    The product page allows managers to fully control the product catalog. Products can be added quickly with all necessary details. Existing products can be updated at any time to change prices or information. If a product is no longer available, it can be blocked without deleting it. This ensures clean and organized product management. The page is designed to be fast and simple to use. It helps keep stock and sales accurate.
-                </p>
-            </div>
-    
-            <div class="image-zone">
-                <img src="images/product_page.png" alt="Sample Image">
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="image-zone">
-                <img src="images/sale_and_add_to_stock_page.png" alt="Sample Image">
-            </div>
-
-            <div class="text-zone">
-                <h2 class="title">4. Sales and Stock Management</h2>
-                <p class="description">
-                    This section is dedicated to selling products and managing stock levels. Cashiers can sell products easily with a smooth and fast process. Managers can also add products to stock when new items arrive. Every action is recorded to keep inventory up to date. This reduces errors and avoids missing or extra stock. The system ensures that sales and stock are always synchronized. It is essential for daily business operations.
-                </p>
-            </div>
-        </section>
-    
-        <section class="content-section">
-            <div class="text-zone">
-                <h2 class="title">5. Ticket Management</h2>
-                <p class="description">
-                    The ticket page records every sale made to clients. When a cashier sells products, they are saved automatically into a ticket. Each ticket shows the list of purchased products clearly. Tickets can be viewed later for verification or reporting. The system allows filtering tickets to find specific sales quickly. This improves transparency and control over transactions. It also helps with customer support and accounting.
-                </p>
-            </div>
-    
-            <div class="image-zone">
-                <img src="images/ticket_page.png" alt="Sample Image">
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="image-zone">
-                <img src="images/cashiers_page.png" alt="Sample Image">
-            </div>
-
-            <div class="text-zone">
-                <h2 class="title">6. Cashier Management</h2>
-                <p class="description">
-                    The cashier page allows managers to manage cashier accounts easily. New cashiers can be added to the system in just a few steps. Existing cashier information can be updated when needed. If a cashier is no longer active, the account can be blocked securely. This ensures controlled access to the system. Each cashier’s activity can be tracked through the system. It helps maintain security and accountability.
-                </p>
-            </div>
-        </section>
-
-        <section class="content-section">
-            
-        
-            <div class="text-zone">
-                <h2 class="title">7. Multilanguage & RTL Support</h2>
-                <p class="description">
-                    The application supports multiple languages to provide a better experience for users from different regions. Users can easily switch between languages ​​according to their needs. The system is fully compatible with Right-To-Left (RTL) languages like Arabic, ensuring that the interface remains clear and properly aligned. This makes the app accessible, user-friendly, and adaptable to a wider audience.
-                </p>
-            </div>
-
-            <div class="image-zone">
-                <img src="images/multilanguage.png" alt="Multilanguage Support">
-            </div>
-
-        </section>
-        
-        <section class="content-section">
-            <div class="image-zone">
-                <img src="images/ticket_custom.png" alt="Ticket Customization">
-            </div>
-        
-            <div class="text-zone">
-                <h2 class="title">8. Ticket Customization</h2>
-                <p class="description">
-                    Users can fully customize their tickets to match their business needs. Additional details can be added to provide more information for customers. The system also allows adding a logo image to give a professional and branded look to each ticket. This flexibility helps businesses create personalized and clear receipts that reflect their identity.
-                </p>
-            </div>
-        </section>
-        
-    </main>
-
-
-    <section class="pricing" id="pricing">
-        <h2>Plans and Pricing</h2>
-        <!-- Toggle
-        <p class="subtitle">
-          Receive unlimited credits when you pay yearly, and save on your plan.
-        </p>
-      
-         
-        <div class="toggle">
-          <button class="active" id="monthlyBtn">Monthly</button>
-          <button id="annualBtn">Annual <span>Save 35%</span></button>
-        </div>-->
-      
-        <!-- Cards -->
-        <div class="cards">
-      
-          <!-- Free -->
-          <div class="card">
-            <div class="price-container">
-                <img src="images/logo.png" alt="Free" class="price-icon">
-                <h2>Free</h2>
-            </div>
-           
-            <p class="price">$0</p>
-            <p class="billing">Per year</p>
-      
-            <ul>
-              <li>Free </li>
-              <li>39 Tickets/Day</li>
-              <li>29 Products</li>
-              <li>Stock Management</li>
-              <li>Online Storage</li>
-              <li id="no">Work offline</li>
-              <li id="no">Can invite guests</li>
-            </ul>
-      
-            <a href="download.html">
-              <button class="btn">Get started for Basic</button>
-            </a>
-           
-          </div>
-      
-          <!-- Pro -->
-          <div class="card highlight">
-            <div class="badge">🔥 Popular</div>
-            <div class="price-container">
-                <img src="images/plus.png" alt="Plus" class="price-icon">
-                <h2>Plus</h2>
-            </div>
-            <p class="price" id="proPrice">$96.95</p>
-            <p class="billing">Per year</p>
-      
-            <ul>
-              <li>399 Tickets/Day</li>
-              <li>299 Products</li>
-              <li>Stock Management</li>
-              <li>Online Storage</li>
-              <li >Work offline</li>
-              <li id="no">Can invite guests</li>
-              </ul>
-      
-            <a href="download.html">
-                <button class="btn">Started with Standard</button>
-            </a>
-          </div>
-      
-            <!-- Pro -->
-            <div class="card">
-                <div class="price-container">
-                    <img src="images/pro.png" alt="Pro" class="price-icon">
-                    <h2>Pro</h2>
-                </div>
-                
-                <p class="price" id="proPrice">$239.95</p>
-                <p class="billing">Per year</p>
-          
-
-                  <ul>
-                    <li>Unlimited Tickets/Day</li>
-                    <li>Unlimited Products</li>
-                    <li>Stock Management</li>
-                    <li>Online Storage</li>
-                    <li>Work offline</li>
-                    <li>Can invite guests</li>
-                    </ul>
-          
-                  <a href="download.html">
-                    <button class="btn">Started with Partners</button>
-                 </a>
-              </div>
-
-             
-        </div>
-      </section>
-
-     <!-- SERVICES SECTION 
-     <div class="services">
-        <h1>See what the hype is about</h1>
-        <div class="services__container">
-            
-            <div class="services__card">
-                <h2>Experience Bliss</h2>
-                <p>AI Powered Technolgie</p>
-                <button>Get Started</button>
-            </div>
-
-            <div class="services__card">
-                <h2>Are you Ready?</h2>
-                <p>Take the leap</p>
-                <button>Get Started</button>
-            </div> 
-
-            
-            <div class="services__card">
-                <h2>Experience Bliss</h2>
-                <p>AI Powered Technolgie</p>
-                <button>Get Started</button>
-            </div>
-
-            <div class="services__card">
-                <h2>Are you Ready?</h2>
-                <p>Take the leap</p>
-                <button>Get Started</button>
-            </div> 
-        </div>
-     </div>-->
-
-     <!-- FOOTER SECTION -->
-     <div class="footer__container">
-        <div class="footer__links">
-
-            <div class="footer__link--wrapper">
-               <div class="footer__link--items">
-                    <h2>Legal</h2>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="refund.html">Refund Policy</a>
-                    <a href="./blog/">Read blogs</a>
-                </div>
-            </div>
-
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>Contact Us</h2>
-                    <a href="mailto:info@kusox.com?subject=information Request&body=Hello information team,">More information info@kusox.com  </a>
-                    <a href="mailto:support@kusox.com?subject=Support Request&body=Hello support team,">Support team support@kusox.com</a>
-                    <!-- <a href="/">Sales team</a> -->
-                    <a href="mailto:contact@kusox.com?subject=Contact Request&body=Hello Contact team,">Contact us contact@kusox.com</a>
-                    
-
-                </div>
-            </div>
-
-            <!--
-            <div class="footer__link--wrapper">
-
-                <div class="footer__link--items">
-                    <h2>About Us</h2>
-                    <a href="/">How it work</a>
-                    <a href="/">Testimonals</a>
-                    <a href="/">Careers</a>
-                    <a href="/">Investments</a>
-                    <a href="/">Term of Services</a>
-                </div>
-
-                <div class="footer__link--items">
-                    <h2>Video</h2>
-                    <a href="/">How it work</a>
-                    <a href="/">Testimonals</a>
-                    <a href="/">Careers</a>
-                    <a href="/">Investments</a>
-                    <a href="/">Term of Services</a>
-                </div>
-
-            </div>-->
-        </div>
-
-        <div class="social__media">
-            <div class="social__media--wrap">
-                <div class="footer__logo">
-                    <a href="" id="navbar__logo">
-                        <img src="images/logo_tall.png" alt="NEXT Logo" class="logo-img">
-                    </a>
-                </div>
-                <br>
-                <p class="website__rights">KUSOX 2014-2026. All rights reserved</p>
-                <div class="social__icons">
-                    
-                    <a href="https://www.facebook.com/share/18nAEw8FaB/" class="social__icon--links" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/kussa_2026?igsh=YXV3YnJ4OHd6ZnBj" class="social__icon--links" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <a href="" class="social__icon--links" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-                    <a href="" class="social__icon--links" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    
-     </div>
-
-    <script src="app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+    }));
+  </script>
 </body>
 </html>
