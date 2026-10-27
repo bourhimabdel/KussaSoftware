@@ -6,7 +6,7 @@
         <loc>https://kusox.com/</loc>
     </url>
     <url>
-        <loc>https://kusox.com/download</loc>
+        <loc>https://kusox.com/download.html</loc>
     </url>
 
     <!-- Blog homepage -->
@@ -51,7 +51,10 @@
         <loc>https://kusox.com/refund.html</loc>
     </url>
     <url>
-        <loc>https://kusox.com/delete_my_data</loc>
+        <loc>https://kusox.com/delete_my_data.html</loc>
+    </url>
+    <url>
+        <loc>https://kusox.com/pricing.html</loc>
     </url>
 
 </urlset>
