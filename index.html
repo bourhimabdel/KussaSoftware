@@ -24,7 +24,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f5f6fa">
+  <meta name="theme-color" content="#f5f6fa" id="theme-color-meta">
   <meta name="robots" content="index, follow">
   <title>KUSOX POS | Point of Sale Software for Retail and Restaurants</title>
   <meta name="description" content="Manage sales, products, stock, cashiers and receipts with KUSOX Point of Sale software for retail shops and restaurants.">
@@ -240,6 +240,147 @@ p { color: var(--muted); }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
 
+
+/* -------------------------------------------------------
+   APPEARANCE: follows the visitor's device by default.
+   Visitors can cycle System -> Light -> Dark -> System.
+-------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --page-bg: #ffffff;
+  --section-bg: #f5f6fa;
+  --card-bg: #fafbfc;
+  --card-alt-bg: #fff8f7;
+  --surface-bg: #ffffff;
+  --header-bg: rgba(255,255,255,.92);
+  --footer-bg: #f6f7fa;
+  --text-main: #17191f;
+  --text-muted: #68707e;
+  --text-soft: #515866;
+  --border-color: #e5e7ed;
+  --border-strong: #dfe2e9;
+  --accent-soft: #fff0ee;
+  --accent-section: #fff0ee;
+  --shadow-color: rgba(22,26,38,.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --page-bg: #141414;
+    --section-bg: #1b1b1b;
+    --card-bg: #222222;
+    --card-alt-bg: #2a211f;
+    --surface-bg: #202020;
+    --header-bg: rgba(20,20,20,.92);
+    --footer-bg: #191919;
+    --text-main: #f3f4f6;
+    --text-muted: #a4a9b3;
+    --text-soft: #c1c5ce;
+    --border-color: #343434;
+    --border-strong: #414141;
+    --accent-soft: #382421;
+    --accent-section: #2b201e;
+    --shadow-color: rgba(0,0,0,.28);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #141414;
+  --section-bg: #1b1b1b;
+  --card-bg: #222222;
+  --card-alt-bg: #2a211f;
+  --surface-bg: #202020;
+  --header-bg: rgba(20,20,20,.92);
+  --footer-bg: #191919;
+  --text-main: #f3f4f6;
+  --text-muted: #a4a9b3;
+  --text-soft: #c1c5ce;
+  --border-color: #343434;
+  --border-strong: #414141;
+  --accent-soft: #382421;
+  --accent-section: #2b201e;
+  --shadow-color: rgba(0,0,0,.28);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --page-bg: #ffffff;
+  --section-bg: #f5f6fa;
+  --card-bg: #fafbfc;
+  --card-alt-bg: #fff8f7;
+  --surface-bg: #ffffff;
+  --header-bg: rgba(255,255,255,.92);
+  --footer-bg: #f6f7fa;
+  --text-main: #17191f;
+  --text-muted: #68707e;
+  --text-soft: #515866;
+  --border-color: #e5e7ed;
+  --border-strong: #dfe2e9;
+  --accent-soft: #fff0ee;
+  --accent-section: #fff0ee;
+  --shadow-color: rgba(22,26,38,.10);
+}
+
+html, body { background: var(--page-bg); color: var(--text-main); }
+body { transition: background-color .2s ease, color .2s ease; }
+.site-header { background: var(--header-bg); border-bottom-color: var(--border-color); }
+.nav-links > a:not(.button) { color: var(--text-soft); }
+.nav-links > a:not(.button):hover { color: var(--accent-dark); }
+.button-secondary { background: var(--surface-bg); border-color: var(--border-strong); color: var(--text-main); }
+.button-secondary:hover { background: var(--accent-soft); border-color: var(--accent); }
+.menu-toggle { color: var(--text-main); }
+.hero { background: radial-gradient(ellipse at 83% 38%, rgba(247,112,98,.12), transparent 34%), linear-gradient(180deg, var(--section-bg) 0%, var(--page-bg) 100%); }
+.hero-points span { color: var(--text-soft); }
+.visual-window { background: var(--surface-bg); border-color: var(--border-strong); box-shadow: 0 30px 80px var(--shadow-color); }
+.window-top { background: var(--surface-bg); border-bottom-color: var(--border-color); }
+.floating-note { background: var(--surface-bg); border-color: var(--border-color); box-shadow: 0 14px 40px var(--shadow-color); }
+.floating-note strong { color: var(--text-main); }
+.hero-bottom { color: var(--text-muted); }
+.hero-line { background: var(--border-strong); }
+.solutions, .final-cta { background: var(--page-bg); }
+.solution-card { background: var(--card-bg); border-color: var(--border-color); }
+.restaurant-card { background: var(--card-alt-bg); border-color: var(--border-color); }
+.solution-icon, .note-icon, .cta-mark { background: var(--accent-soft); }
+.card-kicker { color: var(--text-muted); }
+.features { background: var(--section-bg); }
+.feature-row { border-bottom-color: var(--border-color); }
+.check-list li { color: var(--text-soft); }
+.feature-image { background: var(--surface-bg); border-color: var(--border-color); box-shadow: 0 18px 45px var(--shadow-color); }
+.language-section { background: #17191f; color: #ffffff; }
+.pricing-preview { background: var(--accent-section); }
+.site-footer { background: var(--footer-bg); border-top-color: var(--border-color); }
+.footer-col a { color: var(--text-muted); }
+.footer-bottom { border-top-color: var(--border-color); }
+.social-links a { border-color: var(--border-strong); color: var(--text-muted); }
+
+/* The language showcase remains intentionally dark in both themes. */
+.theme-toggle {
+  min-height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 9px;
+  background: var(--surface-bg);
+  color: var(--text-main);
+  font: 600 12px 'DM Sans', Arial, sans-serif;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.theme-toggle:hover { border-color: var(--accent); background: var(--accent-soft); }
+.theme-toggle i { color: var(--accent-dark); font-size: 14px; }
+.theme-toggle-label { white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .nav-links { background: var(--surface-bg); border-bottom-color: var(--border-color); }
+  .nav-links > a:not(.button) { border-bottom-color: var(--border-color); }
+  .nav-links .theme-toggle { margin-top: 12px; align-self: flex-start; }
+}
+
 </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -253,11 +394,16 @@ p { color: var(--muted); }
         <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
       <div class="nav-links" id="nav-links">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Appearance: system" title="Appearance: system">
+          <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+          <span class="theme-toggle-label">System</span>
+        </button>
         <a href="#solutions">Solutions</a>
         <a href="#features">Features</a>
         <a href="pricing.html">Pricing</a>
         <a href="./blog/">Blog</a>
         <a class="button button-small" href="download.html"><i class="fa-solid fa-download" aria-hidden="true"></i> Download</a>
+       
       </div>
     </nav>
   </header>
@@ -430,7 +576,69 @@ p { color: var(--muted); }
   </footer>
 
   <script>
+    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Appearance preference: system by default, with optional light/dark override.
+    (() => {
+      const root = document.documentElement;
+      const themeButton = document.getElementById('theme-toggle');
+      const themeIcon = themeButton.querySelector('i');
+      const themeLabel = themeButton.querySelector('.theme-toggle-label');
+      const themeColorMeta = document.getElementById('theme-color-meta');
+      const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+      const themes = ['system', 'light', 'dark'];
+      let selectedTheme = localStorage.getItem('kusox-theme') || 'system';
+
+      if (!themes.includes(selectedTheme)) selectedTheme = 'system';
+
+      function applyTheme() {
+        const effectiveTheme = selectedTheme === 'system'
+          ? (systemPreference.matches ? 'dark' : 'light')
+          : selectedTheme;
+
+        if (selectedTheme === 'system') {
+          root.removeAttribute('data-theme');
+        } else {
+          root.setAttribute('data-theme', selectedTheme);
+        }
+
+        themeLabel.textContent = selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
+        themeButton.setAttribute('aria-label', 'Appearance: ' + selectedTheme + '. Click to change appearance.');
+        themeButton.title = 'Appearance: ' + selectedTheme + ' (click to change)';
+        themeIcon.className = selectedTheme === 'system'
+          ? 'fa-solid fa-circle-half-stroke'
+          : selectedTheme === 'dark'
+            ? 'fa-solid fa-moon'
+            : 'fa-solid fa-sun';
+
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute('content', effectiveTheme === 'dark' ? '#141414' : '#f5f6fa');
+        }
+      }
+
+      themeButton.addEventListener('click', () => {
+        const currentIndex = themes.indexOf(selectedTheme);
+        selectedTheme = themes[(currentIndex + 1) % themes.length];
+        localStorage.setItem('kusox-theme', selectedTheme);
+        applyTheme();
+      });
+
+      // If the visitor uses System mode, respond immediately to device changes.
+      if (systemPreference.addEventListener) {
+        systemPreference.addEventListener('change', () => {
+          if (selectedTheme === 'system') applyTheme();
+        });
+      } else if (systemPreference.addListener) {
+        systemPreference.addListener(() => {
+          if (selectedTheme === 'system') applyTheme();
+        });
+      }
+
+      applyTheme();
+    })();
+
+    // Mobile navigation
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     menuToggle.addEventListener('click', () => {
@@ -440,6 +648,7 @@ p { color: var(--muted); }
         ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
         : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
     });
+
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
       navLinks.classList.remove('is-open');
       menuToggle.setAttribute('aria-expanded', 'false');

@@ -1,0 +1,24 @@
+
+/* Shared KUSOX appearance switch — matches the main index page */
+.theme-toggle {
+  min-height: 39px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 0 12px !important;
+  border: 1px solid var(--border-strong, var(--border, var(--line, #414141))) !important;
+  border-radius: 9px !important;
+  background: var(--surface-bg, var(--bg-card, var(--white, #202020))) !important;
+  color: var(--text-main, var(--ink, #f3f4f6)) !important;
+  font: 600 12px 'DM Sans', Arial, sans-serif !important;
+  cursor: pointer !important;
+  transition: background .2s ease, border-color .2s ease, color .2s ease !important;
+  white-space: nowrap;
+}
+.theme-toggle:hover {
+  border-color: var(--accent, #f77062) !important;
+  background: var(--accent-soft, #382421) !important;
+}
+.theme-toggle i { color: var(--accent-dark, #f77062) !important; font-size: 14px !important; }
+.theme-toggle-label { white-space: nowrap; }

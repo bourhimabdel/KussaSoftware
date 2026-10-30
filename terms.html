@@ -6,7 +6,7 @@
   <title>Terms of Service | KUSOX SOFTWARE</title>
   <meta name="description" content="Read the KUSOX SOFTWARE Terms of Service covering use of the point-of-sale system, accounts, subscriptions, acceptable use, service availability, and support.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#141414">
+  <meta name="theme-color" content="#f5f6fa">
   <link rel="icon" href="images/app_icon.ico">
   <style>
     :root {
@@ -75,13 +75,109 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
     }
+  
+/* KUSOX shared appearance control */
+:root {
+  color-scheme: light;
+  --bg-main: #f5f6fa;
+  --bg-card: #ffffff;
+  --bg-soft: #f8f9fc;
+  --text-main: #222831;
+  --text-muted: #626b78;
+  --border: #e1e5eb;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-main: #141414;
+  --bg-card: #1d1f23;
+  --bg-soft: #25282e;
+  --text-main: #f1f2f4;
+  --text-muted: #b0b6c1;
+  --border: #383c44;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --bg-main: #141414;
+    --bg-card: #1d1f23;
+    --bg-soft: #25282e;
+    --text-main: #f1f2f4;
+    --text-muted: #b0b6c1;
+    --border: #383c44;
+  }
+}
+body { background: var(--bg-main); color: var(--text-main); }
+header { background: var(--bg-card); }
+.policy-card, .refund-card, .terms-card {
+  box-shadow: 0 15px 45px rgba(0,0,0,.08);
+}
+:root[data-theme="dark"] .policy-card,
+:root[data-theme="dark"] .refund-card,
+:root[data-theme="dark"] .terms-card {
+  box-shadow: 0 15px 45px rgba(0,0,0,.25);
+}
+.theme-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+.theme-select {
+  min-height: 38px;
+  padding: 7px 30px 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  color: var(--text-main);
+  font: inherit;
+  cursor: pointer;
+}
+.theme-select:focus-visible {
+  outline: 3px solid rgba(247,112,98,.35);
+  outline-offset: 2px;
+}
+.header-content { flex-wrap: wrap; }
+@media (max-width: 650px) {
+  .theme-control { margin-left: auto; }
+  .theme-control-label { display: none; }
+  .theme-select { min-height: 34px; font-size: 12px; }
+}
+
   </style>
+
+<script>
+try {
+  const savedTheme = localStorage.getItem('kusox-theme') || 'system';
+  const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark' : 'light';
+  document.documentElement.setAttribute(
+    'data-theme',
+    savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : systemTheme
+  );
+} catch (_) {
+  document.documentElement.setAttribute('data-theme', 'light');
+}
+</script>
+
+
+<link rel="stylesheet" href="theme-switch.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="header-content">
       <a href="/" aria-label="KUSOX home"><img src="images/logo_tall.png" alt="KUSOX SOFTWARE" class="logo"></a>
       <a href="/" class="home-link">Back to Home</a>
+      <label class="theme-control" aria-label="Choose appearance">
+  <span class="theme-control-label">Appearance</span>
+  <select class="theme-select" data-theme-select aria-label="Appearance">
+    <option value="system">System</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</label>
     </div>
   </header>
 
@@ -216,5 +312,49 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+<script>
+(() => {
+  const key = 'kusox-theme';
+  const select = document.querySelector('[data-theme-select]');
+  const meta = document.querySelector('meta[name="theme-color"]');
+  const media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function applyTheme(mode) {
+    const validMode = ['system', 'light', 'dark'].includes(mode) ? mode : 'system';
+    const resolvedTheme = validMode === 'system'
+      ? (media && media.matches ? 'dark' : 'light')
+      : validMode;
+
+    document.documentElement.setAttribute('data-theme', resolvedTheme);
+    if (select) select.value = validMode;
+    if (meta) meta.setAttribute('content', resolvedTheme === 'dark' ? '#17191f' : '#f5f6fa');
+  }
+
+  let saved = 'system';
+  try { saved = localStorage.getItem(key) || 'system'; } catch (_) {}
+  applyTheme(saved);
+
+  if (select) {
+    select.addEventListener('change', () => {
+      const mode = select.value;
+      try { localStorage.setItem(key, mode); } catch (_) {}
+      applyTheme(mode);
+    });
+  }
+
+  if (media) {
+    const updateSystemTheme = () => {
+      let mode = 'system';
+      try { mode = localStorage.getItem(key) || 'system'; } catch (_) {}
+      if (mode === 'system') applyTheme('system');
+    };
+    if (media.addEventListener) media.addEventListener('change', updateSystemTheme);
+    else if (media.addListener) media.addListener(updateSystemTheme);
+  }
+})();
+</script>
+
+<script src="theme-switch.js"></script>
 </body>
 </html>

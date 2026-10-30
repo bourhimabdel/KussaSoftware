@@ -4,17 +4,146 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Download KUSOX Point of Sale for Android, iPhone and Windows.">
+  <meta name="theme-color" content="#f5f6f8" id="theme-color-meta">
   <title>Download KUSOX POS</title>
   <link rel="canonical" href="https://kusox.com/download">
   <link rel="icon" href="images/app_icon.ico">
-  <link rel="stylesheet" href="download.css">
+
+  <style>
+* { box-sizing: border-box; }
+:root { --accent: #f77062; --text: #242424; --muted: #6d6d6d; --page: #f5f6f8; --card: #fff; }
+body { margin: 0; color: var(--text); background: var(--page); font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+a { color: inherit; }
+.site-header { min-height: 82px; padding: 15px clamp(20px, 6vw, 88px); display: flex; align-items: center; justify-content: space-between; background: #fff; border-bottom: 1px solid #e9e9e9; }
+.brand { display: inline-flex; align-items: center; }
+.brand img { display: block; width: auto; height: 48px; max-width: 190px; object-fit: contain; }
+.header-link { text-decoration: none; font-size: 14px; font-weight: 600; color: #333; }
+.header-link:hover, .site-footer a:hover { color: var(--accent); }
+.page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 70px 0 62px; }
+.intro { max-width: 670px; margin: 0 auto 42px; text-align: center; }
+.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .14em; font-size: 12px; margin: 0 0 12px; }
+h1 { font-size: clamp(32px, 4vw, 46px); letter-spacing: -.04em; line-height: 1.12; margin: 0 0 16px; }
+.subtitle { margin: 0; color: var(--muted); line-height: 1.7; font-size: 16px; }
+.platforms { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.platform-card { display: flex; flex-direction: column; align-items: center; text-align: center; background: var(--card); border: 1px solid #e9e9e9; border-radius: 16px; padding: 32px 24px 28px; box-shadow: 0 8px 28px rgba(0,0,0,.035); }
+.platform-icon { width: 66px; height: 66px; display: grid; place-items: center; border-radius: 18px; margin-bottom: 22px; }
+.platform-icon svg { width: 38px; height: 38px; fill: currentColor; }
+.android { color: #3baf70; background: #e8f7ee; }
+.apple { color: #222; background: #f0f0f2; }
+.windows { color: #0879d9; background: #e8f3ff; }
+h2 { margin: 0 0 10px; font-size: 21px; }
+.platform-card > p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0 0 24px; min-height: 46px; }
+.platform-button { width: 100%; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 14px; border-radius: 9px; background: var(--accent); color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; line-height: 1.35; transition: transform .15s ease, background .15s ease; }
+.platform-button:hover { background: #e95f52; transform: translateY(-1px); }
+.platform-button svg { width: 21px; height: 21px; fill: currentColor; flex: 0 0 auto; }
+.platform-card .small-note { min-height: 0; margin: 12px 0 0; font-size: 12px; }
+.help { margin: 34px 0 0; text-align: center; color: var(--muted); font-size: 14px; }
+.help a { color: var(--text); font-weight: 700; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.site-footer { min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px clamp(20px, 6vw, 88px); border-top: 1px solid #e5e5e5; background: #fff; color: #777; font-size: 12px; }
+.site-footer nav { display: flex; gap: 22px; }
+.site-footer a { text-decoration: none; }
+@media (max-width: 800px) { .platforms { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } .platform-card { padding: 28px 24px; } .platform-card > p { min-height: 0; } .page { padding-top: 48px; } }
+@media (max-width: 480px) { .site-header { min-height: 70px; } .brand img { height: 40px; max-width: 150px; } .page { width: min(100% - 28px, 480px); } .site-footer { align-items: flex-start; flex-direction: column; } .site-footer nav { gap: 16px; } }
+
+/* Availability notice shown when Android or iOS is selected */
+.availability-message { max-width: 760px; margin: 0 auto 28px; padding: 16px 20px; border: 1px solid #f7b0a8; border-radius: 10px; background: #fff0ee; color: #8b3027; text-align: center; font-size: 15px; font-weight: 600; line-height: 1.55; }
+.availability-message[hidden] { display: none; }
+button.platform-button { font-family: inherit; border: 0; cursor: pointer; }
+button.platform-button:focus-visible { outline: 3px solid rgba(247,112,98,.35); outline-offset: 3px; }
+
+
+/* KUSOX appearance: Light, Dark, or follow the device setting. */
+:root {
+  color-scheme: light;
+  --page: #f5f6f8;
+  --card: #ffffff;
+  --header: #ffffff;
+  --footer: #ffffff;
+  --text: #242424;
+  --muted: #6d6d6d;
+  --border: #e6e8eb;
+  --control-bg: #ffffff;
+  --control-text: #333333;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #141414;
+  --card: #1e1e1e;
+  --header: #191919;
+  --footer: #191919;
+  --text: #f1f1f1;
+  --muted: #a5a5a5;
+  --border: #333333;
+  --control-bg: #252525;
+  --control-text: #f1f1f1;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --page: #141414;
+    --card: #1e1e1e;
+    --header: #191919;
+    --footer: #191919;
+    --text: #f1f1f1;
+    --muted: #a5a5a5;
+    --border: #333333;
+    --control-bg: #252525;
+    --control-text: #f1f1f1;
+  }
+}
+body { color: var(--text); background: var(--page); transition: background .2s ease, color .2s ease; }
+.site-header { background: var(--header); border-bottom-color: var(--border); }
+.header-link { color: var(--text); }
+.platform-card { background: var(--card); border-color: var(--border); }
+.site-footer { background: var(--footer); border-top-color: var(--border); color: var(--muted); }
+.help a { color: var(--text); }
+.availability-message { background: #fff0ee; color: #8b3027; }
+html[data-theme="dark"] .availability-message {
+  background: #3a211f;
+  border-color: #82443d;
+  color: #ffb7ae;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]):not([data-theme="dark"]) .availability-message {
+    background: #3a211f;
+    border-color: #82443d;
+    color: #ffb7ae;
+  }
+}
+.header-actions { display: flex; align-items: center; gap: 18px; }
+.theme-toggle {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--control-bg);
+  color: var(--control-text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle:focus-visible { outline: 3px solid rgba(247,112,98,.3); outline-offset: 2px; }
+@media (max-width: 480px) {
+  .header-actions { gap: 10px; }
+  .theme-toggle { padding: 7px 9px; font-size: 12px; }
+}
+  </style>
+
+<link rel="stylesheet" href="theme-switch.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="/" aria-label="KUSOX home">
       <img src="images/logo_tall.png" alt="KUSOX Software">
     </a>
-    <a class="header-link" href="/">Home</a>
+    <div class="header-actions">
+      <a class="header-link" href="/">Home</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Change appearance">Appearance: System</button>
+    </div>
   </header>
 
   <main class="page">
@@ -79,6 +208,47 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Keep the appearance preference consistent across KUSOX website pages.
+    (function () {
+      const root = document.documentElement;
+      const button = document.getElementById('theme-toggle');
+      const themeColor = document.getElementById('theme-color-meta');
+      const modes = ['system', 'light', 'dark'];
+      const labels = { system: 'System', light: 'Light', dark: 'Dark' };
+      let mode = 'system';
+
+      try {
+        const saved = localStorage.getItem('kusox-theme');
+        if (modes.includes(saved)) mode = saved;
+      } catch (_) { /* Storage may be unavailable; use the device setting. */ }
+
+      function applyTheme() {
+        if (mode === 'system') {
+          root.removeAttribute('data-theme');
+        } else {
+          root.setAttribute('data-theme', mode);
+        }
+        button.textContent = 'Appearance: ' + labels[mode];
+        const dark = mode === 'dark' || (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        themeColor.setAttribute('content', dark ? '#141414' : '#f5f6f8');
+      }
+
+      button.addEventListener('click', function () {
+        mode = modes[(modes.indexOf(mode) + 1) % modes.length];
+        try { localStorage.setItem('kusox-theme', mode); } catch (_) { /* Keep the choice for this page session. */ }
+        applyTheme();
+      });
+
+      const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+      if (systemPreference.addEventListener) {
+        systemPreference.addEventListener('change', function () {
+          if (mode === 'system') applyTheme();
+        });
+      }
+      applyTheme();
+    })();
+
+
     function showComingSoon(platform) {
       const message = document.getElementById('availability-message');
       message.textContent = `The KUSOX app for ${platform} will be available soon. Please check back later.`;
@@ -86,5 +256,6 @@
       message.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   </script>
+<script src="theme-switch.js"></script>
 </body>
 </html>
