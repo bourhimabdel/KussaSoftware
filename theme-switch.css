@@ -1,5 +1,4 @@
-
-/* Shared KUSOX appearance switch — matches the main index page */
+/* Shared KUSOX appearance switch — visually matches index.html on every page. */
 .theme-toggle {
   min-height: 39px !important;
   display: inline-flex !important;
@@ -7,18 +6,56 @@
   justify-content: center !important;
   gap: 8px !important;
   padding: 0 12px !important;
-  border: 1px solid var(--border-strong, var(--border, var(--line, #414141))) !important;
+  border: 1px solid #dfe2e9 !important;
   border-radius: 9px !important;
-  background: var(--surface-bg, var(--bg-card, var(--white, #202020))) !important;
-  color: var(--text-main, var(--ink, #f3f4f6)) !important;
+  background: #ffffff !important;
+  color: #17191f !important;
   font: 600 12px 'DM Sans', Arial, sans-serif !important;
   cursor: pointer !important;
   transition: background .2s ease, border-color .2s ease, color .2s ease !important;
-  white-space: nowrap;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
+
 .theme-toggle:hover {
-  border-color: var(--accent, #f77062) !important;
-  background: var(--accent-soft, #382421) !important;
+  border-color: #f77062 !important;
+  background: #fff0ee !important;
 }
-.theme-toggle i { color: var(--accent-dark, #f77062) !important; font-size: 14px !important; }
-.theme-toggle-label { white-space: nowrap; }
+
+.theme-toggle i {
+  color: #e85f52 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+}
+
+.theme-toggle-label { white-space: nowrap !important; }
+
+/* Explicit dark selection. */
+:root[data-theme="dark"] .theme-toggle {
+  border-color: #414141 !important;
+  background: #202020 !important;
+  color: #f3f4f6 !important;
+}
+:root[data-theme="dark"] .theme-toggle:hover {
+  border-color: #f77062 !important;
+  background: #382421 !important;
+}
+
+/* System mode follows the visitor's operating-system preference. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle {
+    border-color: #414141 !important;
+    background: #202020 !important;
+    color: #f3f4f6 !important;
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle:hover {
+    border-color: #f77062 !important;
+    background: #382421 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-links .theme-toggle { margin-top: 12px !important; align-self: flex-start !important; }
+}
