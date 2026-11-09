@@ -223,6 +223,14 @@ p { color: var(--muted); }
     .pricing-hero p:not(.eyebrow) { max-width:660px; margin:18px auto 0; font-size:16px; }
     .pricing-section { padding:55px 0 90px; background:var(--paper); }
     .pricing-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; align-items:stretch; }
+    .billing-switch-wrap { display:flex; justify-content:center; margin:0 auto 34px; }
+    .billing-switch { display:inline-flex; align-items:center; gap:4px; padding:5px; border:1px solid var(--line); border-radius:14px; background:var(--paper); }
+    .billing-option { min-width:142px; min-height:48px; padding:0 20px; border:0; border-radius:10px; background:transparent; color:#aeb3bd; font:700 14px 'DM Sans',Arial,sans-serif; cursor:pointer; transition:background .2s ease,color .2s ease,box-shadow .2s ease; }
+    .billing-option[aria-pressed="true"] { background:var(--white); color:var(--ink); box-shadow:0 2px 8px rgba(0,0,0,.2); }
+    .billing-option:focus-visible { outline:3px solid rgba(247,112,98,.7); outline-offset:3px; }
+    .billing-option .discount { margin-left:5px; color:#9ee3b9; font-size:11px; white-space:nowrap; }
+    .plan-price strong, .plan-price span, .plan-note { transition:opacity .15s ease; }
+    @media(max-width:480px){.billing-option{min-width:0;padding:0 15px;font-size:13px}.billing-option .discount{font-size:10px}}
     .plan-card { position:relative; display:flex; flex-direction:column; padding:32px 28px; border:1px solid var(--line); border-radius:20px; background:#fff; box-shadow:0 12px 35px rgba(22,26,38,.05); }
     .plan-card.featured { border:2px solid var(--accent); box-shadow:0 20px 50px rgba(247,112,98,.13); }
     .plan-label { color:var(--accent-dark); font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
@@ -508,7 +516,75 @@ p { color: var(--muted); }
   .theme-select { min-height:36px; }
 }
 
-  </style>
+  
+/* Pricing page theme support: keep all pricing surfaces readable in light and dark modes. */
+:root[data-theme="dark"] .pricing-hero,
+:root[data-theme="dark"] .pricing-section {
+  background: var(--paper);
+  color: var(--ink);
+}
+:root[data-theme="dark"] .pricing-faq {
+  background: var(--white);
+  color: var(--ink);
+}
+:root[data-theme="dark"] .plan-card {
+  background: #22252c;
+  border-color: var(--line);
+  color: var(--ink);
+}
+:root[data-theme="dark"] .plan-card.featured {
+  border-color: var(--accent);
+}
+:root[data-theme="dark"] .plan-features li {
+  color: var(--muted);
+}
+:root[data-theme="dark"] .faq-item {
+  background: #22252c;
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .faq-item h3,
+:root[data-theme="dark"] .plan-card h2,
+:root[data-theme="dark"] .plan-card h3 {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .plan-card .button-secondary {
+  background: #292c33;
+  border-color: #454a55;
+  color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .pricing-hero,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .pricing-section {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .pricing-faq {
+    background: var(--white);
+    color: var(--ink);
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .plan-card,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .faq-item {
+    background: #22252c;
+    border-color: var(--line);
+    color: var(--ink);
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .plan-features li {
+    color: var(--muted);
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .faq-item h3,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .plan-card h2,
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .plan-card h3 {
+    color: var(--ink);
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .plan-card .button-secondary {
+    background: #292c33;
+    border-color: #454a55;
+    color: var(--ink);
+  }
+}
+
+</style>
 
 <script>
 try {
@@ -525,7 +601,70 @@ try {
 </script>
 
 
-<link rel="stylesheet" href="theme-switch.css">
+<style>
+/* Shared KUSOX appearance switch — visually matches index.html on every page. */
+.theme-toggle {
+  min-height: 39px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 0 12px !important;
+  border: 1px solid #dfe2e9 !important;
+  border-radius: 9px !important;
+  background: #ffffff !important;
+  color: #17191f !important;
+  font: 600 12px 'DM Sans', Arial, sans-serif !important;
+  cursor: pointer !important;
+  transition: background .2s ease, border-color .2s ease, color .2s ease !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.theme-toggle:hover {
+  border-color: #f77062 !important;
+  background: #fff0ee !important;
+}
+
+.theme-toggle i {
+  color: #e85f52 !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+}
+
+.theme-toggle-label { white-space: nowrap !important; }
+
+/* Explicit dark selection. */
+:root[data-theme="dark"] .theme-toggle {
+  border-color: #414141 !important;
+  background: #202020 !important;
+  color: #f3f4f6 !important;
+}
+:root[data-theme="dark"] .theme-toggle:hover {
+  border-color: #f77062 !important;
+  background: #382421 !important;
+}
+
+/* System mode follows the visitor's operating-system preference. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle {
+    border-color: #414141 !important;
+    background: #202020 !important;
+    color: #f3f4f6 !important;
+  }
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .theme-toggle:hover {
+    border-color: #f77062 !important;
+    background: #382421 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-links .theme-toggle { margin-top: 12px !important; align-self: flex-start !important; }
+}
+
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -556,11 +695,17 @@ try {
     </section>
     <section class="pricing-section">
       <div class="container">
+        <div class="billing-switch-wrap">
+          <div class="billing-switch" role="group" aria-label="Choose billing period">
+            <button class="billing-option" type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+            <button class="billing-option" type="button" data-billing="yearly" aria-pressed="false">Yearly <span class="discount">-20%</span></button>
+          </div>
+        </div>
         <div class="pricing-grid">
           <article class="plan-card">
             <p class="plan-label">Get started</p><h2>Free</h2>
             <p class="plan-description">Explore the core POS workflow for a small business.</p>
-            <div class="plan-price"><strong>$0</strong><span>/ year</span></div><p class="plan-note">No annual payment</p>
+            <div class="plan-price"><strong>$0</strong><span>/ free</span></div><p class="plan-note">No payment</p>
             <div class="plan-divider"></div><h3>Plan highlights</h3>
             <ul class="plan-features">
               <li>
@@ -597,7 +742,7 @@ try {
           <article class="plan-card featured">
             <p class="plan-label">For growing businesses</p><h2>Plus</h2>
             <p class="plan-description">More flexibility for businesses that need expanded tools.</p>
-            <div class="plan-price"><strong>$96.95</strong><span>/ year</span></div><p class="plan-note">Billed annually</p>
+            <div class="plan-price"><strong data-monthly-price="$7.95" data-yearly-price="$76.95">$7.95</strong><span data-price-period>/ month</span></div><p class="plan-note" data-price-note>Billed monthly</p>
             <div class="plan-divider"></div><h3>Plan highlights</h3>
             <ul class="plan-features">
               <li>
@@ -634,7 +779,7 @@ try {
           <article class="plan-card">
             <p class="plan-label">For advanced needs</p><h2>Pro</h2>
             <p class="plan-description">A higher-tier option for businesses with broader requirements.</p>
-            <div class="plan-price"><strong>$239.95</strong><span>/ year</span></div><p class="plan-note">Billed annually</p>
+            <div class="plan-price"><strong data-monthly-price="$19.95" data-yearly-price="$191.95">$19.95</strong><span data-price-period>/ month</span></div><p class="plan-note" data-price-note>Billed monthly</p>
             <div class="plan-divider"></div><h3>Plan highlights</h3>
             <ul class="plan-features">
               <li>
@@ -669,7 +814,7 @@ try {
             <a class="button button-secondary" href="download.html">Get started</a>
           </article>
         </div>
-        <p class="pricing-footnote">Prices are shown in USD per year. Features and availability may depend on your project configuration. Please contact KUSOX support to confirm the current features and payment options before purchasing.</p>
+        <p class="pricing-footnote">Prices are shown in USD. Choose monthly billing or save 20% with yearly billing. The Free plan has no subscription fee. Features and availability may depend on your project configuration.</p>
       </div>
     </section>
     <section class="pricing-faq">
@@ -688,6 +833,34 @@ try {
   <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand-col"><a class="brand footer-brand" href="/" aria-label="KUSOX home"><img src="images/logo_tall.png" alt="KUSOX Software" class="logo-img"></a><p>Point of sale software for retail shops, cafés and restaurants.</p></div><div class="footer-col"><h3>Explore</h3><a href="/#solutions">Solutions</a><a href="/#features">Features</a><a href="pricing.html">Pricing</a><a href="./blog/">Blog</a><a href="download.html">Downloads</a></div><div class="footer-col"><h3>Support</h3><a href="mailto:support@kusox.com">support@kusox.com</a><a href="/delete_my_data">Data deletion</a></div><div class="footer-col"><h3>Legal</h3><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a></div></div><div class="container footer-bottom"><p>© <span id="year"></span> KUSOX SOFTWARE. All rights reserved.</p></div></footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Monthly/yearly pricing selector. Prices are display values only;
+    // subscription checkout and billing are handled separately by the app.
+    const billingButtons = document.querySelectorAll('[data-billing]');
+    const paidPlanPrices = document.querySelectorAll('[data-monthly-price][data-yearly-price]');
+    const pricePeriods = document.querySelectorAll('[data-price-period]');
+    const priceNotes = document.querySelectorAll('[data-price-note]');
+
+    function setBillingPeriod(period) {
+      const isYearly = period === 'yearly';
+      billingButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.billing === period));
+      });
+      paidPlanPrices.forEach(price => {
+        price.textContent = isYearly ? price.dataset.yearlyPrice : price.dataset.monthlyPrice;
+      });
+      pricePeriods.forEach(label => {
+        label.textContent = isYearly ? '/ year' : '/ month';
+      });
+      priceNotes.forEach(note => {
+        note.textContent = isYearly ? 'Billed annually — save 20%' : 'Billed monthly';
+      });
+    }
+
+    billingButtons.forEach(button => {
+      button.addEventListener('click', () => setBillingPeriod(button.dataset.billing));
+    });
+
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     menuToggle.addEventListener('click', () => {
@@ -701,6 +874,70 @@ try {
     }));
   </script>
 
-<script src="theme-switch.js"></script>
+<script>
+/* Shared KUSOX appearance switch — same behavior as the main index page */
+(() => {
+  const root = document.documentElement;
+  const themes = ['system', 'light', 'dark'];
+  const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+  let selectedTheme = 'system';
+  try { selectedTheme = localStorage.getItem('kusox-theme') || 'system'; } catch (_) {}
+  if (!themes.includes(selectedTheme)) selectedTheme = 'system';
+
+  // Replace any page-specific selector with the exact shared control.
+  const oldControl = document.querySelector(
+    '#theme-toggle, .theme-toggle, .theme-control, [data-theme-select]'
+  );
+  const button = document.createElement('button');
+  button.className = 'theme-toggle';
+  button.id = 'theme-toggle';
+  button.type = 'button';
+  button.innerHTML = '<i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i><span class="theme-toggle-label">System</span>';
+  button.setAttribute('aria-label', 'Appearance: system');
+  button.title = 'Appearance: system';
+  if (oldControl) oldControl.replaceWith(button);
+  else {
+    const target = document.querySelector('.nav-links, .nav, .header-actions, .header-content, header');
+    if (target) target.appendChild(button);
+  }
+
+  function applyTheme() {
+    const effectiveTheme = selectedTheme === 'system'
+      ? (systemPreference.matches ? 'dark' : 'light')
+      : selectedTheme;
+    if (selectedTheme === 'system') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', selectedTheme);
+
+    button.querySelector('.theme-toggle-label').textContent =
+      selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
+    button.setAttribute('aria-label', 'Appearance: ' + selectedTheme + '. Click to change appearance.');
+    button.title = 'Appearance: ' + selectedTheme + ' (click to change)';
+    button.querySelector('i').className = selectedTheme === 'system'
+      ? 'fa-solid fa-circle-half-stroke'
+      : selectedTheme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+
+    const meta = document.getElementById('theme-color-meta') || document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', effectiveTheme === 'dark' ? '#141414' : '#f5f6fa');
+  }
+
+  button.addEventListener('click', () => {
+    selectedTheme = themes[(themes.indexOf(selectedTheme) + 1) % themes.length];
+    try { localStorage.setItem('kusox-theme', selectedTheme); } catch (_) {}
+    applyTheme();
+  });
+
+  if (systemPreference.addEventListener) {
+    systemPreference.addEventListener('change', () => {
+      if (selectedTheme === 'system') applyTheme();
+    });
+  } else if (systemPreference.addListener) {
+    systemPreference.addListener(() => {
+      if (selectedTheme === 'system') applyTheme();
+    });
+  }
+  applyTheme();
+})();
+
+</script>
 </body>
 </html>
