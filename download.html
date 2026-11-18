@@ -48,7 +48,7 @@ h2 { margin: 0 0 10px; font-size: 21px; }
 /* Availability notice shown when Android or iOS is selected */
 .availability-message { max-width: 760px; margin: 0 auto 28px; padding: 16px 20px; border: 1px solid #f7b0a8; border-radius: 10px; background: #fff0ee; color: #8b3027; text-align: center; font-size: 15px; font-weight: 600; line-height: 1.55; }
 .availability-message[hidden] { display: none; }
-button.platform-button { font-family: inherit; border: 0; cursor: pointer; }
+button.platform-button { font-family: inherit; border: 0; cursor: pointer; color: #17191f }
 button.platform-button:focus-visible { outline: 3px solid rgba(247,112,98,.35); outline-offset: 3px; }
 
 
@@ -162,9 +162,12 @@ html[data-theme="dark"] .availability-message {
         </div>
         <h2>Android</h2>
         <p>Install KUSOX POS on your Android phone or tablet.</p>
-        <button class="platform-button" type="button" onclick="showComingSoon('Android')">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.2 2.7c-.4.4-.6 1-.6 1.8v15c0 .8.2 1.4.6 1.8L12 12 3.2 2.7Z"/><path d="m14.1 14.1-9.3 5.3c-.2.1-.4.2-.6.1L12 12l2.1 2.1Z"/><path d="M20.1 10.1 16 7.8 12 12l2.1 2.1 6-3.4c1-.5 1-1.1 0-1.6Z"/><path d="M4.2 2.5c.2 0 .4 0 .6.2L16 7.8 12 12 3.2 2.7c.3-.2.6-.3 1-.2Z"/></svg>
-          <span>Coming soon</span>
+        <button class="platform-button" type="button"
+          onclick="window.open('https://play.google.com/store/apps/details?id=com.kusox.pos', '_blank')">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+           <path d="M3.2 2.5C2.8 2.9 2.5 3.5 2.5 4.3v15.4c0 .8.3 1.4.7 1.8l9-9.5L3.2 2.5Zm10 8.5 2.5-2.7L5.1 1.8c-.5-.3-1.1-.4-1.6-.1l9.7 9.3Zm0 2L3.5 22.3c.5.3 1.1.2 1.6-.1l10.6-6.5-2.5-2.7Zm3.4-3.7-2.8 3 2.8 3 3.3-2c1-.6 1-1.5 0-2.1l-3.3-1.9Z"/>
+          </svg>
+          <span>Download for Android</span>
         </button>
       </article>
 
@@ -186,10 +189,13 @@ html[data-theme="dark"] .availability-message {
         </div>
         <h2>Windows</h2>
         <p>Download the KUSOX POS installer directly to your computer.</p>
-        <a class="platform-button" href="downloads/kusoxWindowsApp.exe">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4.5 10.5 3v8H2v-6.5ZM12 2.8 22 1v10H12v-8.2ZM2 13h8.5v8L2 19.5V13Zm10 0h10v10l-10-1.8V13Z"/></svg>
-          <span>Download for Windows</span>
-        </a>
+        <button class="platform-button" type="button"
+        onclick="window.location.href='downloads/kusoxWindowsApp.exe'">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M2 4.5 10.5 3v8H2v-6.5ZM12 2.8 22 1v10H12v-8.2ZM2 13h8.5v8L2 19.5V13Zm10 0h10v10l-10-1.8V13Z"/>
+    </svg>
+    <span>Download for Windows</span>
+</button>
         <p class="small-note">The installer will download directly to your device.</p>
       </article>
     </section>
